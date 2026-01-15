@@ -14,7 +14,7 @@ export default function BookingCTA() {
           transition={{ duration: 0.5 }}
           className="font-bodoni text-4xl md:text-5xl mb-6 tracking-tight text-warm-stone/90"
         >
-          Request a Ritual
+          Book a ritual
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}

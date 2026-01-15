@@ -1,23 +1,44 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 interface HeroProps {
   headline: string;
   subcopy: string;
   ctaText?: string;
   ctaLink?: string;
+  videoSrc?: string;
 }
 
-export default function Hero({ headline, subcopy, ctaText = 'Request a Ritual', ctaLink = '/contact' }: HeroProps) {
+export default function Hero({ headline, subcopy, ctaText = 'Book a ritual', ctaLink = '/contact', videoSrc }: HeroProps) {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-domus-green stone-texture">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-domus-green/70 z-10" />
-        <div className="absolute inset-0 bg-gradient-to-br from-domus-green via-domus-green/80 to-domus-green" />
-      </div>
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-domus-green">
+      {/* Video Background */}
+      {videoSrc && (
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={videoSrc} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          {/* Brown Overlay */}
+          <div className="absolute inset-0 bg-ash-brown/60 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-ash-brown/70 via-soft-clay/50 to-ash-brown/60 z-10" />
+        </div>
+      )}
+      
+      {/* Fallback background if no video */}
+      {!videoSrc && (
+        <div className="absolute inset-0 stone-texture">
+          <div className="absolute inset-0 bg-domus-green/70 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-domus-green via-domus-green/80 to-domus-green" />
+        </div>
+      )}
 
       <div className="relative z-20 max-w-4xl mx-auto px-6 text-center text-warm-stone">
         <motion.h1

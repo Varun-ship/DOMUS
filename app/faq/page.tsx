@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const faqItems = [
   {
     question: 'How do I book a ritual?',
-    answer: 'You can request a ritual through our contact form. We respond within 24 hours to confirm availability and discuss your preferences. We recommend booking at least one week in advance, though we may have availability for shorter notice requests.',
+    answer: 'You can book a ritual through our contact form. We respond within 24 hours to confirm availability and discuss your preferences. We recommend booking at least one week in advance, though we may have availability for shorter notice requests.',
   },
   {
     question: 'What areas do you serve?',

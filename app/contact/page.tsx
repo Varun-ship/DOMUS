@@ -66,7 +66,7 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="font-bodoni text-5xl md:text-6xl mb-6 tracking-tight"
           >
-            Request a Ritual
+            Book a ritual
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -61,12 +61,13 @@ export default function Home() {
         subcopy="At-home wellness rituals, reimagined for modern living.
 
 Premium outcall spa treatments that bring warmth, presence, touch, and renewal into your home."
+        videoSrc="/videos/hero-video.mp4"
       />
 
       {/* The Domus Promise */}
       <section className="py-24 bg-warm-stone">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-bodoni text-4xl md:text-5xl text-center mb-16 tracking-tight">
+          <h2 className="font-bodoni text-4xl md:text-5xl text-center mb-16 tracking-tight font-semibold">
             The Domus Promise
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
