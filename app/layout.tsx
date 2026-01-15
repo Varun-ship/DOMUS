@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import StructuredData from '@/components/StructuredData';
 
 const bodoniModa = Bodoni_Moda({
-  subsets: ['latin', 'latin-ext', 'cyrillic'],
+  subsets: ['latin', 'latin-ext'],
   weight: ['400', '500', '600'],
   variable: '--font-bodoni',
   display: 'swap',
