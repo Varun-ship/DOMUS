@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-warm-stone text-ash-brown font-inter antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bodoni tracking-tight;
+  }
+  
+  h1, h4 {
+    @apply text-warm-stone/90;
+  }
+  
+  h2, h3, h5, h6 {
+    @apply text-ash-brown;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .stone-texture {
+    background-image: 
+      radial-gradient(circle at 1px 1px, rgba(58, 47, 42, 0.03) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+}
+
+

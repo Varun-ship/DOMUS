@@ -1,0 +1,106 @@
+import type { Metadata } from 'next';
+import RitualCard from '@/components/RitualCard';
+import AnimatedSection from '@/components/AnimatedSection';
+import AnimatedHeading from '@/components/AnimatedHeading';
+import AnimatedText from '@/components/AnimatedText';
+
+export const metadata: Metadata = {
+  title: 'Services',
+  description: 'Explore our premium outcall home wellness rituals. Each service is designed to bring warmth, presence, and renewal into your space.',
+};
+
+const services = [
+  {
+    title: 'Roman Renewal Ritual',
+    description: 'A full-body experience inspired by the thermae. Warm oil massage, breathwork, and restorative stillness woven together for complete renewal.',
+    href: '/services/roman-renewal-ritual',
+  },
+  {
+    title: 'Calm Body Release',
+    description: 'Gentle, flowing touch designed to release tension and restore nervous system balance. Slow, intentional movements that invite deep relaxation.',
+    href: '/services/calm-body-release',
+  },
+  {
+    title: 'Warm Oil Reset',
+    description: 'Aromatic oils warmed to body temperature, applied with rhythmic strokes. Deeply nourishing, grounding, and restorative.',
+    href: '/services/warm-oil-reset',
+  },
+  {
+    title: 'Deep Restore',
+    description: 'Extended session for complete restoration. Multiple techniques woven together for profound relaxation and renewal.',
+    href: '/services/deep-restore',
+  },
+];
+
+export default function Services() {
+  return (
+    <div className="pt-24">
+      {/* Hero */}
+      <section className="py-20 bg-domus-green text-warm-stone stone-texture">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <AnimatedHeading as="h1" className="font-bodoni text-5xl md:text-6xl mb-6 tracking-tight">
+            Our Rituals
+          </AnimatedHeading>
+          <AnimatedText delay={0.2} className="font-inter text-lg font-light text-warm-stone/90 leading-relaxed max-w-2xl mx-auto">
+            Each ritual is thoughtfully designed to bring ancient wisdom into your modern home. Premium outcall wellness that honors both tradition and your individual needs.
+          </AnimatedText>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-24 bg-warm-stone">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <AnimatedSection key={index} delay={index * 0.1}>
+                <RitualCard {...service} />
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What to Expect */}
+      <section className="py-24 bg-warm-stone/50">
+        <div className="max-w-4xl mx-auto px-6">
+          <AnimatedSection>
+            <h2 className="font-bodoni text-4xl mb-8 tracking-tight">
+              What to Expect
+            </h2>
+            <div className="space-y-6 font-inter text-base font-light text-ash-brown/80 leading-relaxed">
+            <p>
+              Every DOMUS ritual begins with a brief consultation. We'll discuss your preferences, any areas of focus, and how to prepare your space. Your practitioner arrives with everything needed—oils, linens, heated elements, and a calm, professional presence.
+            </p>
+            <p>
+              The ritual itself unfolds at a slow, intentional pace. We move with presence, allowing time for your nervous system to settle and respond. Touch is warm, grounding, and respectful. The goal is restoration, not just relaxation.
+            </p>
+            <p>
+              After the session, we provide gentle aftercare guidance to help you extend the benefits. We recommend taking time to rest, hydrate, and allow the experience to integrate. Many clients find that the effects deepen over the following days.
+            </p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Aftercare Excerpt */}
+      <section className="py-24 bg-warm-stone">
+        <div className="max-w-4xl mx-auto px-6">
+          <AnimatedSection>
+            <h2 className="font-bodoni text-4xl mb-8 tracking-tight">
+              Aftercare
+            </h2>
+            <div className="bg-warm-stone border border-aureum-gold/20 p-8 rounded-sm">
+            <p className="font-inter text-base font-light text-ash-brown/80 leading-relaxed mb-4">
+              After your ritual, we encourage you to move slowly. Rest if possible. Hydrate with warm water or herbal tea. Avoid heavy meals or intense activity for a few hours.
+            </p>
+            <p className="font-inter text-base font-light text-ash-brown/80 leading-relaxed">
+              The benefits of touch and presence often continue to unfold over the following days. Notice how you feel. Many clients report improved sleep, reduced tension, and a greater sense of calm that extends well beyond the session itself.
+            </p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+    </div>
+  );
+}
+
