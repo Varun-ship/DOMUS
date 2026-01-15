@@ -65,7 +65,7 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
       />
 
       {/* The Domus Promise */}
-      <section className="py-24 bg-warm-stone">
+      <section className="pt-24 pb-12 bg-warm-stone">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-bodoni text-4xl md:text-5xl text-center mb-16 tracking-tight font-semibold">
             The Domus Promise
@@ -105,7 +105,7 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
       </section>
 
       {/* Featured Rituals */}
-      <section className="py-24 bg-warm-stone/50">
+      <section className="pt-12 pb-24 bg-warm-stone/50">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-bodoni text-4xl md:text-5xl mb-4 tracking-tight">
             Featured Rituals

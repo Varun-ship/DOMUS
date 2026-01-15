@@ -37,12 +37,6 @@ export default function Header() {
             Services
           </Link>
           <Link 
-            href="/rituals" 
-            className="text-ash-brown hover:text-aureum-gold transition-colors font-inter text-sm tracking-wide"
-          >
-            Ritual Library
-          </Link>
-          <Link 
             href="/blog" 
             className="text-ash-brown hover:text-aureum-gold transition-colors font-inter text-sm tracking-wide"
           >
@@ -89,9 +83,6 @@ export default function Header() {
               </Link>
               <Link href="/services" className="block text-ash-brown hover:text-aureum-gold transition-colors">
                 Services
-              </Link>
-              <Link href="/rituals" className="block text-ash-brown hover:text-aureum-gold transition-colors">
-                Ritual Library
               </Link>
               <Link href="/blog" className="block text-ash-brown hover:text-aureum-gold transition-colors">
                 Journal
