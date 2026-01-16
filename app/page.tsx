@@ -136,8 +136,21 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
       </section>
 
       {/* How It Works */}
-      <section className="py-24 bg-domus-green">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="relative py-24 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/background.jpeg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Green overlay with 50% less opacity (was 80%, now 40%) */}
+          <div className="absolute inset-0 bg-domus-green/40"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-4xl mx-auto px-6">
           <h2 className="font-caudex text-4xl md:text-5xl mb-12 text-center tracking-tight text-warm-stone">
             How It Works
           </h2>

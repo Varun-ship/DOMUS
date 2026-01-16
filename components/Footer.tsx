@@ -3,8 +3,21 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-domus-green text-warm-stone">
-      <div className="max-w-7xl mx-auto px-6 py-16">
+    <footer className="relative text-warm-stone overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/background.jpeg"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+        {/* Green overlay with 40% opacity (50% less than original 80%) */}
+        <div className="absolute inset-0 bg-domus-green/40"></div>
+      </div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand Story */}
           <div className="md:col-span-2">
