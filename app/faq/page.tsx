@@ -12,20 +12,20 @@ export const metadata: Metadata = {
 
 const faqItems = [
   {
-    question: 'How do I book a ritual?',
-    answer: 'You can book a ritual through our contact form. We respond within 24 hours to confirm availability and discuss your preferences. We recommend booking at least one week in advance, though we may have availability for shorter notice requests.',
+    question: 'What is an in-home spa ritual?',
+    answer: 'It\'s a guided wellness experience brought into your home. Combining touch, calm, and intention to transform your space into a place of renewal.',
   },
   {
-    question: 'What areas do you serve?',
-    answer: 'We currently serve London, Manchester, Birmingham, and Edinburgh, with plans to expand. If you\'re unsure whether we serve your area, please contact us to confirm.',
+    question: 'Why at home?',
+    answer: 'Because true relaxation happens where you feel safest. No travel, no waiting rooms, no noise, just your space, reset.',
   },
   {
-    question: 'What do I need to prepare?',
-    answer: 'Very little. We bring everything needed for the ritual. You\'ll need a quiet, comfortable space (bedroom or living room), clean linens or towels for the massage surface, dim lighting, and a comfortable temperature. We\'ll provide detailed guidance when you book.',
+    question: 'What happens during the treatment?',
+    answer: 'We arrive, set the atmosphere, guide you into stillness, and deliver a slow, intentional body ritual tailored to you.',
   },
   {
-    question: 'How long do the rituals last?',
-    answer: 'Ritual duration varies by service, typically ranging from 90 minutes to 3 hours. This includes consultation, the ritual itself, and aftercare guidance. We\'ll confirm the exact duration when you book.',
+    question: 'Do I need to prepare anything?',
+    answer: 'Just a quiet room and an open mindset. We bring everything else.',
   },
   {
     question: 'What should I wear?',
@@ -33,23 +33,31 @@ const faqItems = [
   },
   {
     question: 'Are your practitioners qualified?',
-    answer: 'Yes. All DOMUS practitioners are fully trained and certified in our signature rituals. They undergo extensive training in technique, presence, and the principles that guide our practice.',
+    answer: 'Yes. All Domus practitioners are fully trained and certified in our signature rituals. They undergo extensive training in technique, presence, and the principles that guide our practice.',
   },
   {
-    question: 'Can I request a specific practitioner?',
-    answer: 'We\'ll do our best to accommodate practitioner preferences when possible. Please mention this in your booking request, and we\'ll confirm availability.',
+    question: 'Who is Domus for?',
+    answer: 'Anyone feeling overstimulated, burnt out, disconnected, or simply craving deep rest.',
   },
   {
     question: 'What if I need to cancel or reschedule?',
     answer: 'We understand that plans change. Please contact us as soon as possible to cancel or reschedule. We have a cancellation policy that we\'ll share when you book.',
   },
   {
-    question: 'Do you offer gift rituals?',
-    answer: 'Yes. Gift rituals are available. Please contact us to discuss gifting options and we can help you create a meaningful gift experience.',
+    question: 'Can couples or friends book together?',
+    answer: 'Yes, shared treatments can be arranged upon request and we do offer Couples massage.',
   },
   {
-    question: 'What makes DOMUS different from other wellness services?',
-    answer: 'DOMUS is built on the principles of slow luxury, presence, and ancient wisdom. We don\'t rush. We don\'t treat wellness as transactional. Every ritual is a dedicated time for restoration, delivered with full presence and care. We bring everything to your home, creating sanctuary wherever you are.',
+    question: 'How much are the treatments?',
+    answer: 'Our treatments range from AED 160 to AED 1,100 depending on your needs.',
+  },
+  {
+    question: 'How do I book?',
+    answer: 'You can book your treatment simply by clicking "Book a Ritual" or the WhatsApp icon on our website.',
+  },
+  {
+    question: 'Do you offer discounts or loyalty programs?',
+    answer: 'Yes, we offer a loyalty program. After completing 10 treatments, you will receive a free 60 minute relaxing treatment on us',
   },
 ];
 
