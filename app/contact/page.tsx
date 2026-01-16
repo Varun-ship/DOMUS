@@ -38,7 +38,7 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="max-w-2xl mx-auto px-6 text-center"
         >
-          <h1 className="font-bodoni text-4xl md:text-5xl mb-6 tracking-tight">
+          <h1 className="font-caudex text-4xl md:text-5xl mb-6 tracking-tight">
             Thank You
           </h1>
           <p className="font-inter text-lg font-light text-ash-brown/80 leading-relaxed mb-8">
@@ -64,7 +64,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="font-bodoni text-5xl md:text-6xl mb-6 tracking-tight"
+            className="font-caudex text-5xl md:text-6xl mb-6 tracking-tight"
           >
             Book a ritual
           </motion.h1>

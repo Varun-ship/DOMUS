@@ -100,7 +100,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
               {post.date}
             </span>
           </div>
-          <h1 className="font-bodoni text-4xl md:text-5xl mb-6 tracking-tight">
+          <h1 className="font-caudex text-4xl md:text-5xl mb-6 tracking-tight">
             {post.title}
           </h1>
           <p className="font-inter text-lg font-light text-ash-brown/70 mb-12 leading-relaxed">

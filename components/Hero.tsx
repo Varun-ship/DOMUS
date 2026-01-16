@@ -45,7 +45,7 @@ export default function Hero({ headline, subcopy, ctaText = 'Book a ritual', cta
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="font-bodoni text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight mb-6 text-balance"
+          className="font-caudex text-5xl md:text-7xl lg:text-8xl font-normal tracking-tight mb-6 text-balance"
         >
           {headline}
         </motion.h1>

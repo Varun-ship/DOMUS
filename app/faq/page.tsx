@@ -81,7 +81,7 @@ export default function FAQ() {
       {/* Hero */}
       <section className="py-20 bg-domus-green text-warm-stone stone-texture">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <AnimatedHeading as="h1" className="font-bodoni text-5xl md:text-6xl mb-6 tracking-tight">
+          <AnimatedHeading as="h1" className="font-caudex text-5xl md:text-6xl mb-6 tracking-tight">
             Frequently Asked Questions
           </AnimatedHeading>
           <AnimatedText delay={0.2} className="font-inter text-lg font-light text-warm-stone/90 leading-relaxed max-w-2xl mx-auto">
@@ -101,7 +101,7 @@ export default function FAQ() {
       <section className="py-24 bg-warm-stone/50">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <AnimatedSection>
-            <h2 className="font-bodoni text-3xl mb-6">Still have questions?</h2>
+            <h2 className="font-caudex text-3xl mb-6">Still have questions?</h2>
             <p className="font-inter text-base font-light text-ash-brown/70 mb-8">
               We're here to help. Contact us with any questions or to discuss your needs.
             </p>

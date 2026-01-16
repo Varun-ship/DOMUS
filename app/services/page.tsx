@@ -38,7 +38,7 @@ export default function Services() {
       {/* Hero */}
       <section className="py-20 bg-domus-green text-warm-stone stone-texture">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <AnimatedHeading as="h1" className="font-bodoni text-5xl md:text-6xl mb-6 tracking-tight">
+          <AnimatedHeading as="h1" className="font-caudex text-5xl md:text-6xl mb-6 tracking-tight">
             Our Rituals
           </AnimatedHeading>
           <AnimatedText delay={0.2} className="font-inter text-lg font-light text-warm-stone/90 leading-relaxed max-w-2xl mx-auto">
@@ -64,7 +64,7 @@ export default function Services() {
       <section className="py-24 bg-warm-stone/50">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
-            <h2 className="font-bodoni text-4xl mb-8 tracking-tight">
+            <h2 className="font-caudex text-4xl mb-8 tracking-tight">
               What to Expect
             </h2>
             <div className="space-y-6 font-inter text-base font-light text-ash-brown/80 leading-relaxed">
@@ -86,7 +86,7 @@ export default function Services() {
       <section className="py-24 bg-warm-stone">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
-            <h2 className="font-bodoni text-4xl mb-8 tracking-tight">
+            <h2 className="font-caudex text-4xl mb-8 tracking-tight">
               Aftercare
             </h2>
             <div className="bg-warm-stone border border-aureum-gold/20 p-8 rounded-sm">

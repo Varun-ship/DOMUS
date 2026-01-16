@@ -22,7 +22,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="font-bodoni text-lg mb-4">Explore</h4>
+            <h4 className="font-caudex text-lg mb-4">Explore</h4>
             <ul className="space-y-2 font-inter text-sm font-light">
               <li>
                 <Link href="/about" className="hover:text-aureum-gold transition-colors">
@@ -49,7 +49,7 @@ export default function Footer() {
 
           {/* Legal & Contact */}
           <div>
-            <h4 className="font-bodoni text-lg mb-4">Connect</h4>
+            <h4 className="font-caudex text-lg mb-4">Connect</h4>
             <ul className="space-y-2 font-inter text-sm font-light">
               <li>
                 <Link href="/contact" className="hover:text-aureum-gold transition-colors">

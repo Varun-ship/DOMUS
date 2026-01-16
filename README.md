@@ -17,7 +17,7 @@ A premium, calm-feeling website for DOMUS, an outcall home wellness brand inspir
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
-- **Fonts**: Bodoni Moda (headings) + Inter (body) from Google Fonts
+- **Fonts**: Caudex (headings) + Inter (body) from Google Fonts
 
 ## Brand Colors
 

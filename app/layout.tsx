@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
-import { Bodoni_Moda, Inter } from 'next/font/google';
+import { Caudex, Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import StructuredData from '@/components/StructuredData';
 import WhatsAppWidget from '@/components/WhatsAppWidget';
 
-const bodoniModa = Bodoni_Moda({
+const caudex = Caudex({
   subsets: ['latin', 'latin-ext'],
-  weight: ['400', '500', '600'],
-  variable: '--font-bodoni',
+  weight: ['400', '700'],
+  variable: '--font-caudex',
   display: 'swap',
 });
 
@@ -57,7 +57,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${bodoniModa.variable} ${inter.variable}`}>
+    <html lang="en" className={`${caudex.variable} ${inter.variable}`}>
       <body className="min-h-screen flex flex-col">
         <StructuredData data={organizationSchema} />
         <Header />

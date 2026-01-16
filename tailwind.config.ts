@@ -16,7 +16,7 @@ const config: Config = {
         'ash-brown': '#3A2F2A',
       },
       fontFamily: {
-        'bodoni': ['var(--font-bodoni)', 'serif'],
+        'caudex': ['var(--font-caudex)', 'serif'],
         'inter': ['var(--font-inter)', 'sans-serif'],
       },
       letterSpacing: {

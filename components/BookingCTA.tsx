@@ -11,7 +11,7 @@ export default function BookingCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="font-bodoni text-4xl md:text-5xl mb-6 tracking-tight text-warm-stone/90"
+          className="font-caudex text-4xl md:text-5xl mb-6 tracking-tight text-warm-stone/90"
         >
           Book a ritual
         </motion.h2>

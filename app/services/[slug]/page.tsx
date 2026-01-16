@@ -148,7 +148,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
       {/* Hero */}
       <section className="py-20 bg-domus-green text-warm-stone stone-texture">
         <div className="max-w-4xl mx-auto px-6">
-          <AnimatedHeading as="h1" className="font-bodoni text-5xl md:text-6xl mb-6 tracking-tight">
+          <AnimatedHeading as="h1" className="font-caudex text-5xl md:text-6xl mb-6 tracking-tight">
             {ritual.title}
           </AnimatedHeading>
           <AnimatedText delay={0.2} className="font-inter text-lg font-light text-warm-stone/90 leading-relaxed">
@@ -161,7 +161,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
       <section className="py-24 bg-warm-stone">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
-            <h2 className="font-bodoni text-3xl mb-6 tracking-tight">
+            <h2 className="font-caudex text-3xl mb-6 tracking-tight">
               The Ritual Story
             </h2>
             <p className="font-inter text-base font-light text-ash-brown/80 leading-relaxed">
@@ -175,7 +175,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
       <section className="py-24 bg-warm-stone/50">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
-            <h2 className="font-bodoni text-3xl mb-6 tracking-tight">
+            <h2 className="font-caudex text-3xl mb-6 tracking-tight">
               Who It's For
             </h2>
             <p className="font-inter text-base font-light text-ash-brown/80 leading-relaxed">
@@ -189,7 +189,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
       <section className="py-24 bg-warm-stone">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
-            <h2 className="font-bodoni text-3xl mb-6 tracking-tight">
+            <h2 className="font-caudex text-3xl mb-6 tracking-tight">
               What's Included
             </h2>
             <ul className="space-y-3 font-inter text-base font-light text-ash-brown/80">
@@ -208,7 +208,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
       <section className="py-24 bg-warm-stone/50">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
-            <h2 className="font-bodoni text-3xl mb-6 tracking-tight">
+            <h2 className="font-caudex text-3xl mb-6 tracking-tight">
               Home Preparation
             </h2>
             <ul className="space-y-3 font-inter text-base font-light text-ash-brown/80">
@@ -227,7 +227,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
       <section className="py-24 bg-warm-stone">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
-            <h2 className="font-bodoni text-3xl mb-6 tracking-tight">
+            <h2 className="font-caudex text-3xl mb-6 tracking-tight">
               Aftercare
             </h2>
             <p className="font-inter text-base font-light text-ash-brown/80 leading-relaxed">

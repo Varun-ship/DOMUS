@@ -33,7 +33,7 @@ export default function Blog() {
       {/* Hero */}
       <section className="py-20 bg-domus-green text-warm-stone stone-texture">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <AnimatedHeading as="h1" className="font-bodoni text-5xl md:text-6xl mb-6 tracking-tight">
+          <AnimatedHeading as="h1" className="font-caudex text-5xl md:text-6xl mb-6 tracking-tight">
             Journal
           </AnimatedHeading>
           <AnimatedText delay={0.2} className="font-inter text-lg font-light text-warm-stone/90 leading-relaxed max-w-2xl mx-auto">

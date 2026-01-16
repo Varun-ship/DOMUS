@@ -59,7 +59,7 @@ export default function RitualCard({ title, description, href, image }: RitualCa
             )}
           </div>
           <div className="p-8">
-          <h3 className="font-bodoni text-2xl mb-3 text-ash-brown group-hover:text-domus-green transition-colors">
+          <h3 className="font-caudex text-2xl mb-3 text-ash-brown group-hover:text-domus-green transition-colors">
             {title}
           </h3>
           <p className="font-inter text-sm font-light text-ash-brown/70 leading-relaxed">

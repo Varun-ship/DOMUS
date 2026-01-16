@@ -68,13 +68,13 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
       {/* The Domus Promise */}
       <section className="pt-24 pb-12 bg-warm-stone">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-bodoni text-4xl md:text-5xl text-center mb-16 tracking-tight font-semibold">
+          <h2 className="font-caudex text-4xl md:text-5xl text-center mb-16 tracking-tight font-semibold">
             The Domus Promise
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
             {pillars.map((pillar, index) => (
               <AnimatedSection key={index} delay={index * 0.1} className="text-center">
-                <h3 className="font-bodoni text-2xl mb-4 text-domus-green">{pillar.title}</h3>
+                <h3 className="font-caudex text-2xl mb-4 text-domus-green">{pillar.title}</h3>
                 <p className="font-inter text-sm font-light text-ash-brown/70 leading-relaxed">
                   {pillar.description}
                 </p>
@@ -108,7 +108,7 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
       {/* Featured Rituals */}
       <section className="pt-12 pb-24 bg-warm-stone/50">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-bodoni text-4xl md:text-5xl mb-4 tracking-tight">
+          <h2 className="font-caudex text-4xl md:text-5xl mb-4 tracking-tight">
             Featured Rituals
           </h2>
           <p className="font-inter text-sm font-light text-ash-brown/60 mb-12 max-w-2xl">
@@ -138,7 +138,7 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
       {/* How It Works */}
       <section className="py-24 bg-domus-green">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-bodoni text-4xl md:text-5xl mb-12 text-center tracking-tight text-warm-stone">
+          <h2 className="font-caudex text-4xl md:text-5xl mb-12 text-center tracking-tight text-warm-stone">
             How It Works
           </h2>
           <div className="space-y-8">
@@ -149,9 +149,9 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
               { step: '04', title: 'Restore', description: 'Aftercare guidance helps you extend the benefits. Take time to rest and integrate.' },
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.1} className="flex gap-6">
-                <div className="font-bodoni text-3xl text-aureum-gold flex-shrink-0">{item.step}</div>
+                <div className="font-caudex text-3xl text-aureum-gold flex-shrink-0">{item.step}</div>
                 <div>
-                  <h3 className="font-bodoni text-xl mb-2 text-warm-stone">{item.title}</h3>
+                  <h3 className="font-caudex text-xl mb-2 text-warm-stone">{item.title}</h3>
                   <p className="font-inter text-sm font-light text-warm-stone/90 leading-relaxed">
                     {item.description}
                   </p>
@@ -165,7 +165,7 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
       {/* Testimonials */}
       <section className="py-24 bg-warm-stone/50">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-bodoni text-4xl md:text-5xl mb-12 text-center tracking-tight">
+          <h2 className="font-caudex text-4xl md:text-5xl mb-12 text-center tracking-tight">
             Reflections
           </h2>
           <TestimonialSlider

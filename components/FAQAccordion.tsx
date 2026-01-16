@@ -23,7 +23,7 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
             className="w-full text-left flex items-center justify-between py-2"
           >
-            <h3 className="font-bodoni text-lg text-ash-brown pr-4">{item.question}</h3>
+            <h3 className="font-caudex text-lg text-ash-brown pr-4">{item.question}</h3>
             <svg
               className={`w-5 h-5 text-aureum-gold transition-transform ${
                 openIndex === index ? 'rotate-180' : ''
