@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function BookingCTA() {
   return (
-    <section className="bg-domus-green text-warm-stone py-20 stone-texture">
+    <section className="bg-domus-green text-warm-stone py-20 pb-0 stone-texture">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

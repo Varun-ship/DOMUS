@@ -12,7 +12,7 @@ interface HeroProps {
 
 export default function Hero({ headline, subcopy, ctaText = 'Book a ritual', ctaLink = '/contact', videoSrc }: HeroProps) {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-domus-green">
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-domus-green pt-24">
       {/* Video Background */}
       {videoSrc && (
         <div className="absolute inset-0 z-0">

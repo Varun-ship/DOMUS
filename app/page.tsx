@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Hero from '@/components/Hero';
 import RitualCard from '@/components/RitualCard';
-import Testimonial from '@/components/Testimonial';
+import TestimonialSlider from '@/components/TestimonialSlider';
 import BookingCTA from '@/components/BookingCTA';
 import AnimatedSection from '@/components/AnimatedSection';
 
@@ -124,9 +124,9 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
       </section>
 
       {/* How It Works */}
-      <section className="py-24 bg-warm-stone">
+      <section className="py-24 bg-domus-green">
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-bodoni text-4xl md:text-5xl mb-12 text-center tracking-tight">
+          <h2 className="font-bodoni text-4xl md:text-5xl mb-12 text-center tracking-tight text-warm-stone">
             How It Works
           </h2>
           <div className="space-y-8">
@@ -139,8 +139,8 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
               <AnimatedSection key={index} delay={index * 0.1} className="flex gap-6">
                 <div className="font-bodoni text-3xl text-aureum-gold flex-shrink-0">{item.step}</div>
                 <div>
-                  <h3 className="font-bodoni text-xl mb-2 text-ash-brown">{item.title}</h3>
-                  <p className="font-inter text-sm font-light text-ash-brown/70 leading-relaxed">
+                  <h3 className="font-bodoni text-xl mb-2 text-warm-stone">{item.title}</h3>
+                  <p className="font-inter text-sm font-light text-warm-stone/90 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -156,23 +156,25 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
           <h2 className="font-bodoni text-4xl md:text-5xl mb-12 text-center tracking-tight">
             Reflections
           </h2>
-          <div className="space-y-8">
-            <Testimonial
-              quote="The Roman Renewal Ritual transformed my home into a true sanctuary. The warmth, the presence, the care—it was unlike anything I've experienced."
-              author="Sarah M."
-              location="London"
-            />
-            <Testimonial
-              quote="DOMUS brought ritual back into my life. It's not just a service; it's a practice of slowing down and returning to myself."
-              author="James R."
-              location="Manchester"
-            />
-            <Testimonial
-              quote="The attention to detail, the calm atmosphere, the quality of touch—everything felt intentional and deeply restorative."
-              author="Emma L."
-              location="Birmingham"
-            />
-          </div>
+          <TestimonialSlider
+            testimonials={[
+              {
+                quote: "The Roman Renewal Ritual transformed my home into a true sanctuary. The warmth, the presence, the care—it was unlike anything I've experienced.",
+                author: "Sarah M.",
+                location: "London"
+              },
+              {
+                quote: "DOMUS brought ritual back into my life. It's not just a service; it's a practice of slowing down and returning to myself.",
+                author: "James R.",
+                location: "Manchester"
+              },
+              {
+                quote: "The attention to detail, the calm atmosphere, the quality of touch—everything felt intentional and deeply restorative.",
+                author: "Emma L.",
+                location: "Birmingham"
+              },
+            ]}
+          />
         </div>
       </section>
 
