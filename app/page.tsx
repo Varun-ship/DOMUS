@@ -14,28 +14,28 @@ export const metadata: Metadata = {
 
 const featuredRituals = [
   {
-    title: 'Roman Renewal Ritual',
-    description: 'A full-body experience inspired by the thermae, combining warm oil massage, breathwork, and restorative stillness.',
-    href: '/services/roman-renewal-ritual',
-    image: '/images/ritual-roman.jpg',
+    title: 'Balinese Massage',
+    description: 'A traditional Indonesian massage combining acupressure, stretching, and aromatherapy. Promotes deep relaxation and energy flow.',
+    href: '/services/balinese-massage',
+    price: 'AED 320',
   },
   {
-    title: 'Calm Body Release',
-    description: 'Gentle, flowing touch designed to release tension and restore nervous system balance. Slow, intentional movements.',
-    href: '/services/calm-body-release',
-    image: '/images/ritual-calm.jpg',
+    title: 'Thai Massage',
+    description: 'Ancient Thai healing art combining acupressure, yoga-like stretching, and energy work. Performed on a mat with the client fully clothed.',
+    href: '/services/thai-massage',
+    price: 'AED 380',
   },
   {
-    title: 'Warm Oil Reset',
-    description: 'Aromatic oils warmed to body temperature, applied with rhythmic strokes. Deeply nourishing and grounding.',
-    href: '/services/warm-oil-reset',
-    image: '/images/ritual-oil.jpg',
+    title: 'Swedish Relaxing Massage',
+    description: 'Classic European massage using long, flowing strokes, kneading, and circular movements. Perfect for stress relief and overall relaxation.',
+    href: '/services/swedish-relaxing-massage',
+    price: 'AED 320',
   },
   {
-    title: 'Deep Restore',
-    description: 'Extended session for complete restoration. Multiple techniques woven together for profound relaxation.',
-    href: '/services/deep-restore',
-    image: '/images/ritual-restore.jpg',
+    title: 'Deep Tissue Massage',
+    description: 'Intensive massage targeting deeper layers of muscle and connective tissue. Ideal for chronic pain, tension, and injury recovery.',
+    href: '/services/deep-tissue-massage',
+    price: 'AED 400',
   },
 ];
 

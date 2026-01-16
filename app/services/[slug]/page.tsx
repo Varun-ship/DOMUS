@@ -6,102 +6,9 @@ import StructuredData from '@/components/StructuredData';
 import AnimatedSection from '@/components/AnimatedSection';
 import AnimatedHeading from '@/components/AnimatedHeading';
 import AnimatedText from '@/components/AnimatedText';
+import { servicesData } from '../services-data';
 
-const rituals: Record<string, {
-  title: string;
-  description: string;
-  story: string;
-  whoFor: string;
-  included: string[];
-  preparation: string[];
-  aftercare: string;
-}> = {
-  'roman-renewal-ritual': {
-    title: 'Roman Renewal Ritual',
-    description: 'A full-body experience inspired by the thermae, combining warm oil massage, breathwork, and restorative stillness.',
-    story: 'The ancient Romans understood that true renewal came through ritual. In the thermae, people moved through spaces of different temperatures, receiving massage, and taking time to restore. This ritual brings that wisdom home.',
-    whoFor: 'Those seeking complete restoration, deep relaxation, and a return to balance. Ideal for anyone feeling overwhelmed, disconnected, or simply in need of profound care.',
-    included: [
-      'Full-body warm oil massage',
-      'Breathwork guidance',
-      'Heated stone placement',
-      'Restorative stillness period',
-      'Aftercare consultation',
-    ],
-    preparation: [
-      'A quiet, comfortable space (bedroom or living room)',
-      'Clean linens or towels for the massage surface',
-      'Dim lighting (candles or soft lamps)',
-      'Comfortable temperature',
-      'Time to rest afterward (2-3 hours recommended)',
-    ],
-    aftercare: 'Rest for at least an hour. Hydrate with warm water. Avoid heavy meals or intense activity. The effects often deepen over 24-48 hours.',
-  },
-  'calm-body-release': {
-    title: 'Calm Body Release',
-    description: 'Gentle, flowing touch designed to release tension and restore nervous system balance. Slow, intentional movements.',
-    story: 'This ritual is built on the understanding that the nervous system needs time and presence to release. We move slowly, allowing your body to respond naturally.',
-    whoFor: 'Anyone experiencing tension, stress, or nervous system overwhelm. Particularly beneficial for those with chronic tension or anxiety.',
-    included: [
-      'Gentle, flowing massage techniques',
-      'Nervous system regulation practices',
-      'Warm oil application',
-      'Breathwork integration',
-      'Extended rest period',
-    ],
-    preparation: [
-      'A quiet space free from interruption',
-      'Comfortable surface (bed or floor mat)',
-      'Soft lighting',
-      'Warm, comfortable temperature',
-      'Time for integration afterward',
-    ],
-    aftercare: 'Move slowly. Rest if possible. Notice how your body feels. Many clients experience a sense of lightness and calm that continues for days.',
-  },
-  'warm-oil-reset': {
-    title: 'Warm Oil Reset',
-    description: 'Aromatic oils warmed to body temperature, applied with rhythmic strokes. Deeply nourishing and grounding.',
-    story: 'Warm oil has been used for thousands of years as a form of nourishment and grounding. This ritual focuses entirely on the restorative power of touch and warmth.',
-    whoFor: 'Those seeking deep nourishment, grounding, and sensory restoration. Perfect for anyone feeling disconnected from their body or in need of gentle care.',
-    included: [
-      'Aromatic warm oil massage',
-      'Full-body application',
-      'Rhythmic, grounding strokes',
-      'Extended session time',
-      'Aftercare guidance',
-    ],
-    preparation: [
-      'Comfortable space with massage surface',
-      'Clean linens',
-      'Dim, warm lighting',
-      'Quiet environment',
-      'Time to rest afterward',
-    ],
-    aftercare: 'Allow the oils to absorb naturally. Rest for at least an hour. The nourishing effects continue as your skin absorbs the oils.',
-  },
-  'deep-restore': {
-    title: 'Deep Restore',
-    description: 'Extended session for complete restoration. Multiple techniques woven together for profound relaxation and renewal.',
-    story: 'Sometimes, a single technique isn\'t enough. This extended ritual combines multiple approaches—warm oil, heated elements, breathwork, and stillness—for complete restoration.',
-    whoFor: 'Those in need of profound restoration, recovery from stress or overwhelm, or simply a dedicated time for complete renewal.',
-    included: [
-      'Extended session duration',
-      'Multiple technique integration',
-      'Warm oil massage',
-      'Heated stone therapy',
-      'Breathwork and stillness',
-      'Comprehensive aftercare',
-    ],
-    preparation: [
-      'A dedicated, quiet space',
-      'Comfortable massage surface',
-      'Clean linens',
-      'Soft, warm lighting',
-      'Full afternoon or evening for rest afterward',
-    ],
-    aftercare: 'This is a profound experience. Plan for complete rest afterward. Many clients find the effects continue to unfold over several days. Take time to integrate.',
-  },
-};
+const rituals = servicesData;
 
 export async function generateStaticParams() {
   return Object.keys(rituals).map((slug) => ({
@@ -164,14 +71,29 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
           <AnimatedHeading as="h1" className="font-caudex text-5xl md:text-6xl mb-6 tracking-tight">
             {ritual.title}
           </AnimatedHeading>
-          <AnimatedText delay={0.2} className="font-inter text-lg font-light text-warm-stone/90 leading-relaxed">
+          <AnimatedText delay={0.2} className="font-inter text-lg font-light text-warm-stone/90 leading-relaxed mb-4">
             {ritual.description}
           </AnimatedText>
+          {ritual.price && (
+            <div className="mt-4">
+              <span className="font-inter text-lg font-normal text-warm-stone">
+                Starting from{' '}
+                <span className="font-semibold text-aureum-gold">{ritual.price}</span>
+              </span>
+            </div>
+          )}
+          {ritual.isAddOn && (
+            <div className="mt-4 inline-block px-4 py-2 bg-aureum-gold/20 border border-aureum-gold/40 rounded-sm">
+              <p className="font-inter text-sm text-warm-stone">
+                Available as an add-on with any 60-minute massage
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
       {/* Story */}
-      <section className="py-24 bg-warm-stone">
+      <section className="pt-16 pb-12 bg-warm-stone">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
             <h2 className="font-caudex text-3xl mb-6 tracking-tight">
@@ -185,7 +107,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
       </section>
 
       {/* Who It's For */}
-      <section className="py-24 bg-warm-stone/50">
+      <section className="pt-12 pb-12 bg-warm-stone/50">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
             <h2 className="font-caudex text-3xl mb-6 tracking-tight">
@@ -199,7 +121,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
       </section>
 
       {/* What's Included */}
-      <section className="py-24 bg-warm-stone">
+      <section className="pt-12 pb-12 bg-warm-stone">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
             <h2 className="font-caudex text-3xl mb-6 tracking-tight">
@@ -218,7 +140,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
       </section>
 
       {/* Preparation */}
-      <section className="py-24 bg-warm-stone/50">
+      <section className="pt-12 pb-12 bg-warm-stone/50">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
             <h2 className="font-caudex text-3xl mb-6 tracking-tight">
@@ -237,7 +159,7 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
       </section>
 
       {/* Aftercare */}
-      <section className="py-24 bg-warm-stone">
+      <section className="pt-12 pb-16 bg-warm-stone">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedSection>
             <h2 className="font-caudex text-3xl mb-6 tracking-tight">

@@ -12,24 +12,98 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    title: 'Roman Renewal Ritual',
-    description: 'A full-body experience inspired by the thermae. Warm oil massage, breathwork, and restorative stillness woven together for complete renewal.',
-    href: '/services/roman-renewal-ritual',
+    title: 'Balinese Massage',
+    description: 'A traditional Indonesian massage combining acupressure, stretching, and aromatherapy. Promotes deep relaxation and energy flow.',
+    href: '/services/balinese-massage',
+    price: 'AED 320',
+    featured: true,
   },
   {
-    title: 'Calm Body Release',
-    description: 'Gentle, flowing touch designed to release tension and restore nervous system balance. Slow, intentional movements that invite deep relaxation.',
-    href: '/services/calm-body-release',
+    title: 'Thai Massage',
+    description: 'Ancient Thai healing art combining acupressure, yoga-like stretching, and energy work. Performed on a mat with the client fully clothed.',
+    href: '/services/thai-massage',
+    price: 'AED 380',
+    featured: true,
   },
   {
-    title: 'Warm Oil Reset',
-    description: 'Aromatic oils warmed to body temperature, applied with rhythmic strokes. Deeply nourishing, grounding, and restorative.',
-    href: '/services/warm-oil-reset',
+    title: 'Swedish Relaxing Massage',
+    description: 'Classic European massage using long, flowing strokes, kneading, and circular movements. Perfect for stress relief and overall relaxation.',
+    href: '/services/swedish-relaxing-massage',
+    price: 'AED 320',
+    featured: true,
   },
   {
-    title: 'Deep Restore',
-    description: 'Extended session for complete restoration. Multiple techniques woven together for profound relaxation and renewal.',
-    href: '/services/deep-restore',
+    title: 'Deep Tissue Massage',
+    description: 'Intensive massage targeting deeper layers of muscle and connective tissue. Ideal for chronic pain, tension, and injury recovery.',
+    href: '/services/deep-tissue-massage',
+    price: 'AED 400',
+    featured: true,
+  },
+  {
+    title: 'Couples Massage',
+    description: 'Share a relaxing experience with your partner. Two therapists work simultaneously in the same space, creating a harmonious wellness journey.',
+    href: '/services/couples-massage',
+    price: 'AED 640',
+    featured: false,
+  },
+  {
+    title: 'Hot Stone Massage',
+    description: 'Smooth, heated stones are placed on key points and used to massage the body. Deeply relaxing and helps release muscle tension.',
+    href: '/services/hot-stone-massage',
+    price: 'AED 400',
+    featured: false,
+  },
+  {
+    title: 'Sport Massage',
+    description: 'Specialized massage for athletes focusing on muscle recovery, injury prevention, and performance enhancement. Combines deep tissue and stretching techniques.',
+    href: '/services/sport-massage',
+    price: 'AED 680',
+    featured: false,
+  },
+  {
+    title: 'Aromatherapy Massage',
+    description: 'Swedish massage enhanced with essential oils chosen for their therapeutic properties. Promotes relaxation, mood enhancement, and overall well-being.',
+    href: '/services/aromatherapy-massage',
+    price: 'AED 400',
+    featured: false,
+  },
+  {
+    title: 'Four Hand Massage',
+    description: 'Two therapists work in perfect synchronization, creating a unique and deeply relaxing experience. Double the touch, double the relaxation.',
+    href: '/services/four-hand-massage',
+    price: 'AED 550',
+    featured: false,
+  },
+  {
+    title: 'Head, Neck & Shoulder Massage',
+    description: 'Focused massage targeting the upper body to relieve tension, headaches, and stress. Perfect for desk workers and those with neck and shoulder pain.',
+    href: '/services/head-neck-shoulder-massage',
+    price: 'AED 160',
+    featured: false,
+  },
+  {
+    title: 'Facial Massage',
+    description: 'Gentle, rejuvenating massage for the face and neck. Promotes circulation, reduces tension, and enhances skin health.',
+    href: '/services/facial-massage',
+    price: 'AED 65',
+    featured: false,
+    isAddOn: true,
+  },
+  {
+    title: 'Foot Massage',
+    description: 'Reflexology-based foot massage targeting pressure points connected to the entire body. Relieves tension and promotes overall wellness.',
+    href: '/services/foot-massage',
+    price: 'AED 60',
+    featured: false,
+    isAddOn: true,
+  },
+  {
+    title: 'Scalp Massage',
+    description: 'Therapeutic scalp massage using gentle pressure and circular motions. Relieves tension, promotes relaxation, and improves scalp health.',
+    href: '/services/scalp-massage',
+    price: 'AED 60',
+    featured: false,
+    isAddOn: true,
   },
 ];
 
@@ -60,9 +134,12 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* All Services */}
       <section className="py-24 bg-warm-stone">
         <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-caudex text-4xl md:text-5xl mb-12 tracking-tight">
+            All Services
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
