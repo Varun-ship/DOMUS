@@ -42,6 +42,12 @@ export default function Header() {
           >
             Journal
           </Link>
+          <Link 
+            href="/faq" 
+            className="text-ash-brown hover:text-aureum-gold transition-colors font-inter text-sm tracking-wide"
+          >
+            FAQ
+          </Link>
           <a 
             href="https://wa.me/971585227291"
             target="_blank"
@@ -86,6 +92,9 @@ export default function Header() {
               </Link>
               <Link href="/blog" className="block text-ash-brown hover:text-aureum-gold transition-colors">
                 Journal
+              </Link>
+              <Link href="/faq" className="block text-ash-brown hover:text-aureum-gold transition-colors">
+                FAQ
               </Link>
               <a 
                 href="https://wa.me/971585227291"

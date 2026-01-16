@@ -106,7 +106,9 @@ export default function FAQ() {
               We're here to help. Contact us with any questions or to discuss your needs.
             </p>
             <a
-              href="/contact"
+              href="https://wa.me/971585227291?text=Hello%2C%20I%20have%20a%20question%20about%20DOMUS"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-domus-green text-warm-stone px-8 py-4 rounded-sm font-inter text-sm tracking-wide hover:bg-domus-green/90 transition-colors"
             >
               Contact Us
