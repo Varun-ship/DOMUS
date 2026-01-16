@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import Hero from '@/components/Hero';
 import RitualCard from '@/components/RitualCard';
 import TestimonialSlider from '@/components/TestimonialSlider';
@@ -113,13 +114,24 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
           <p className="font-inter text-sm font-light text-ash-brown/60 mb-12 max-w-2xl">
             Each ritual is thoughtfully designed to bring ancient wisdom into your modern home.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {featuredRituals.map((ritual, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <RitualCard {...ritual} />
               </AnimatedSection>
             ))}
           </div>
+          <AnimatedSection delay={0.4} className="text-center">
+            <Link 
+              href="/services"
+              className="inline-flex items-center gap-2 text-aureum-gold hover:text-soft-clay font-inter text-sm tracking-wide transition-colors"
+            >
+              View all
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </AnimatedSection>
         </div>
       </section>
 
