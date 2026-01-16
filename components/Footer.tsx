@@ -48,13 +48,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/rituals" className="hover:text-aureum-gold transition-colors">
-                  Ritual Library
+                <Link href="/blog" className="hover:text-aureum-gold transition-colors">
+                  Journal
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-aureum-gold transition-colors">
-                  Journal
+                <Link href="/faq" className="hover:text-aureum-gold transition-colors">
+                  FAQ
                 </Link>
               </li>
             </ul>

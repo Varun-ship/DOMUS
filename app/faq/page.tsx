@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import FAQAccordion from '@/components/FAQAccordion';
 import StructuredData from '@/components/StructuredData';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -79,8 +80,20 @@ export default function FAQ() {
     <div className="pt-24">
       <StructuredData data={faqSchema} />
       {/* Hero */}
-      <section className="py-20 bg-domus-green text-warm-stone stone-texture">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="relative py-20 text-warm-stone overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/background.jpeg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Green overlay with 40% opacity */}
+          <div className="absolute inset-0 bg-domus-green/40"></div>
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <AnimatedHeading as="h1" className="font-caudex text-5xl md:text-6xl mb-6 tracking-tight">
             Frequently Asked Questions
           </AnimatedHeading>

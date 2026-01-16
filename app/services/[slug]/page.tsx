@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import BookingCTA from '@/components/BookingCTA';
 import StructuredData from '@/components/StructuredData';
@@ -146,8 +147,20 @@ export default function ServiceDetail({ params }: { params: { slug: string } }) 
     <div className="pt-24">
       <StructuredData data={serviceSchema} />
       {/* Hero */}
-      <section className="py-20 bg-domus-green text-warm-stone stone-texture">
-        <div className="max-w-4xl mx-auto px-6">
+      <section className="relative py-20 text-warm-stone overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/background.jpeg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Green overlay with 40% opacity */}
+          <div className="absolute inset-0 bg-domus-green/40"></div>
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-6">
           <AnimatedHeading as="h1" className="font-caudex text-5xl md:text-6xl mb-6 tracking-tight">
             {ritual.title}
           </AnimatedHeading>

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -58,8 +59,20 @@ export default function Contact() {
   return (
     <div className="pt-24">
       {/* Hero */}
-      <section className="py-20 bg-domus-green text-warm-stone stone-texture">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="relative py-20 text-warm-stone overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/background.jpeg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Green overlay with 40% opacity */}
+          <div className="absolute inset-0 bg-domus-green/40"></div>
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
