@@ -171,19 +171,16 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
           <TestimonialSlider
             testimonials={[
               {
-                quote: "The Roman Renewal Ritual transformed my home into a true sanctuary. The warmth, the presence, the care—it was unlike anything I've experienced.",
-                author: "Sarah M.",
-                location: "London"
+                quote: "BEST EXPERIENCE IN DUBAI! Fantastic massage. Professional, attentive, and incredibly relaxing. I left feeling completely renewed. Highly recommended!",
+                author: "Miriana"
               },
               {
-                quote: "DOMUS brought ritual back into my life. It's not just a service; it's a practice of slowing down and returning to myself.",
-                author: "James R.",
-                location: "Manchester"
+                quote: "Best duo massage ever.Two team girls were very nice and professional. Truly recommended",
+                author: "Carmelina"
               },
               {
-                quote: "The attention to detail, the calm atmosphere, the quality of touch—everything felt intentional and deeply restorative.",
-                author: "Emma L.",
-                location: "Birmingham"
+                quote: "After just a few massage sessions here, things truly changed:the muscles causing the pain were deeply released and the discomfort almost completely disappeared.",
+                author: "Mattia"
               },
             ]}
           />
