@@ -1,64 +1,61 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import RitualCard from '@/components/RitualCard';
 import AnimatedSection from '@/components/AnimatedSection';
 import AnimatedHeading from '@/components/AnimatedHeading';
 import AnimatedText from '@/components/AnimatedText';
+import { getAllBlogPosts, getAllCategories, urlFor, type BlogPost, type Category } from '@/lib/sanity-queries';
 
-const blogPosts = [
-  {
-    title: 'Welcoming Spring: Rituals for Renewal',
-    description: 'As the seasons shift, our bodies and nervous systems respond. How to align your wellness practice with the rhythms of nature.',
-    href: '/blog/welcoming-spring-rituals-for-renewal',
-    category: 'Wellness',
-  },
-  {
-    title: 'The Gift of Presence',
-    description: 'In a world of constant distraction, presence becomes a radical act. How we cultivate presence in our rituals and daily life.',
-    href: '/blog/the-gift-of-presence',
-    category: 'Philosophy',
-  },
-  {
-    title: 'Touch and Connection',
-    description: 'Exploring the profound role of touch in human connection, healing, and restoration. Why touch matters more than ever.',
-    href: '/blog/touch-and-connection',
-    category: 'Wellness',
-  },
-  {
-    title: 'Slow Living in a Fast World',
-    description: 'Finding moments of stillness and intentionality in our daily routines. Practical ways to embrace slow living.',
-    href: '/blog/slow-living-in-a-fast-world',
-    category: 'Lifestyle',
-  },
-  {
-    title: 'The Art of Ritual',
-    description: 'How small, intentional practices can transform ordinary moments into sacred experiences. Building your own ritual practice.',
-    href: '/blog/the-art-of-ritual',
-    category: 'Philosophy',
-  },
-  {
-    title: 'Nervous System Calm',
-    description: 'Understanding how our nervous system responds to stress and how intentional touch and warmth can support regulation.',
-    href: '/blog/nervous-system-calm',
-    category: 'Wellness',
-  },
-];
-
-const categories = ['All', 'Wellness', 'Philosophy', 'Lifestyle'];
+const categories = ['All'];
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
+  const [availableCategories, setAvailableCategories] = useState<string[]>(['All']);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const [posts, categories] = await Promise.all([
+          getAllBlogPosts(),
+          getAllCategories(),
+        ]);
+        
+        setBlogPosts(posts);
+        
+        // Extract unique category titles
+        const categoryTitles = ['All', ...new Set(posts.map(post => post.category?.title).filter(Boolean) as string[])];
+        setAvailableCategories(categoryTitles);
+      } catch (error) {
+        console.error('Error fetching blog data:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    
+    fetchData();
+  }, []);
 
   const filteredPosts = blogPosts.filter((post) => {
-    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' || post.category?.title === selectedCategory;
     const matchesSearch = 
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.description.toLowerCase().includes(searchQuery.toLowerCase());
+      post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+
+  // Transform Sanity posts to RitualCard format
+  const transformedPosts = filteredPosts.map((post) => ({
+    title: post.title,
+    description: post.excerpt,
+    href: `/blog/${post.slug.current}`,
+    category: post.category?.title || 'Uncategorized',
+    image: post.mainImage?.asset ? urlFor(post.mainImage.asset).width(800).height(600).url() : undefined,
+  }));
 
   return (
     <div className="pt-24">
@@ -112,7 +109,7 @@ export default function Blog() {
 
           {/* Categories */}
           <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category) => (
+            {availableCategories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -132,10 +129,16 @@ export default function Blog() {
       {/* Blog Posts Grid */}
       <section className="py-24 bg-warm-stone">
         <div className="max-w-7xl mx-auto px-6">
-          {filteredPosts.length > 0 ? (
+          {loading ? (
+            <div className="text-center py-12">
+              <p className="font-inter text-base text-ash-brown/60">
+                Loading articles...
+              </p>
+            </div>
+          ) : transformedPosts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post, index) => (
-                <AnimatedSection key={index} delay={index * 0.1}>
+              {transformedPosts.map((post, index) => (
+                <AnimatedSection key={post.href} delay={index * 0.1}>
                   <RitualCard {...post} />
                 </AnimatedSection>
               ))}

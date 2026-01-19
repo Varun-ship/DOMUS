@@ -6,38 +6,25 @@ import RitualCard from '@/components/RitualCard';
 import TestimonialSlider from '@/components/TestimonialSlider';
 import BookingCTA from '@/components/BookingCTA';
 import AnimatedSection from '@/components/AnimatedSection';
+import { servicesData } from '@/app/services/services-data';
 
 export const metadata: Metadata = {
   title: 'Home',
   description: 'DOMUS brings ancient Roman bath rituals to your home. Premium outcall wellness with warmth, presence, touch, and renewal.',
 };
 
-const featuredRituals = [
-  {
-    title: 'Balinese Massage',
-    description: 'A traditional Indonesian massage combining acupressure, stretching, and aromatherapy. Promotes deep relaxation and energy flow.',
-    href: '/services/balinese-massage',
-    price: 'AED 320',
-  },
-  {
-    title: 'Thai Massage',
-    description: 'Ancient Thai healing art combining acupressure, yoga-like stretching, and energy work. Performed on a mat with the client fully clothed.',
-    href: '/services/thai-massage',
-    price: 'AED 380',
-  },
-  {
-    title: 'Swedish Relaxing Massage',
-    description: 'Classic European massage using long, flowing strokes, kneading, and circular movements. Perfect for stress relief and overall relaxation.',
-    href: '/services/swedish-relaxing-massage',
-    price: 'AED 320',
-  },
-  {
-    title: 'Deep Tissue Massage',
-    description: 'Intensive massage targeting deeper layers of muscle and connective tissue. Ideal for chronic pain, tension, and injury recovery.',
-    href: '/services/deep-tissue-massage',
-    price: 'AED 400',
-  },
-];
+// Get featured services with images
+const featuredSlugs = ['balinese-massage', 'thai-massage', 'swedish-relaxing-massage', 'deep-tissue-massage'];
+const featuredRituals = featuredSlugs.map(slug => {
+  const data = servicesData[slug];
+  return {
+    title: data.title,
+    description: data.description,
+    href: `/services/${slug}`,
+    price: data.price,
+    image: data.image,
+  };
+});
 
 const pillars = [
   {

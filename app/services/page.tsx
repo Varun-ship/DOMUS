@@ -4,108 +4,24 @@ import RitualCard from '@/components/RitualCard';
 import AnimatedSection from '@/components/AnimatedSection';
 import AnimatedHeading from '@/components/AnimatedHeading';
 import AnimatedText from '@/components/AnimatedText';
+import { servicesData } from './services-data';
 
 export const metadata: Metadata = {
   title: 'Services',
   description: 'Explore our premium outcall home wellness rituals. Each service is designed to bring warmth, presence, and renewal into your space.',
 };
 
-const services = [
-  {
-    title: 'Balinese Massage',
-    description: 'A traditional Indonesian massage combining acupressure, stretching, and aromatherapy. Promotes deep relaxation and energy flow.',
-    href: '/services/balinese-massage',
-    price: 'AED 320',
-    featured: true,
-  },
-  {
-    title: 'Thai Massage',
-    description: 'Ancient Thai healing art combining acupressure, yoga-like stretching, and energy work. Performed on a mat with the client fully clothed.',
-    href: '/services/thai-massage',
-    price: 'AED 380',
-    featured: true,
-  },
-  {
-    title: 'Swedish Relaxing Massage',
-    description: 'Classic European massage using long, flowing strokes, kneading, and circular movements. Perfect for stress relief and overall relaxation.',
-    href: '/services/swedish-relaxing-massage',
-    price: 'AED 320',
-    featured: true,
-  },
-  {
-    title: 'Deep Tissue Massage',
-    description: 'Intensive massage targeting deeper layers of muscle and connective tissue. Ideal for chronic pain, tension, and injury recovery.',
-    href: '/services/deep-tissue-massage',
-    price: 'AED 400',
-    featured: true,
-  },
-  {
-    title: 'Couples Massage',
-    description: 'Share a relaxing experience with your partner. Two therapists work simultaneously in the same space, creating a harmonious wellness journey.',
-    href: '/services/couples-massage',
-    price: 'AED 640',
-    featured: false,
-  },
-  {
-    title: 'Hot Stone Massage',
-    description: 'Smooth, heated stones are placed on key points and used to massage the body. Deeply relaxing and helps release muscle tension.',
-    href: '/services/hot-stone-massage',
-    price: 'AED 400',
-    featured: false,
-  },
-  {
-    title: 'Sport Massage',
-    description: 'Specialized massage for athletes focusing on muscle recovery, injury prevention, and performance enhancement. Combines deep tissue and stretching techniques.',
-    href: '/services/sport-massage',
-    price: 'AED 680',
-    featured: false,
-  },
-  {
-    title: 'Aromatherapy Massage',
-    description: 'Swedish massage enhanced with essential oils chosen for their therapeutic properties. Promotes relaxation, mood enhancement, and overall well-being.',
-    href: '/services/aromatherapy-massage',
-    price: 'AED 400',
-    featured: false,
-  },
-  {
-    title: 'Four Hand Massage',
-    description: 'Two therapists work in perfect synchronization, creating a unique and deeply relaxing experience. Double the touch, double the relaxation.',
-    href: '/services/four-hand-massage',
-    price: 'AED 550',
-    featured: false,
-  },
-  {
-    title: 'Head, Neck & Shoulder Massage',
-    description: 'Focused massage targeting the upper body to relieve tension, headaches, and stress. Perfect for desk workers and those with neck and shoulder pain.',
-    href: '/services/head-neck-shoulder-massage',
-    price: 'AED 160',
-    featured: false,
-  },
-  {
-    title: 'Facial Massage',
-    description: 'Gentle, rejuvenating massage for the face and neck. Promotes circulation, reduces tension, and enhances skin health.',
-    href: '/services/facial-massage',
-    price: 'AED 65',
-    featured: false,
-    isAddOn: true,
-  },
-  {
-    title: 'Foot Massage',
-    description: 'Reflexology-based foot massage targeting pressure points connected to the entire body. Relieves tension and promotes overall wellness.',
-    href: '/services/foot-massage',
-    price: 'AED 60',
-    featured: false,
-    isAddOn: true,
-  },
-  {
-    title: 'Scalp Massage',
-    description: 'Therapeutic scalp massage using gentle pressure and circular motions. Relieves tension, promotes relaxation, and improves scalp health.',
-    href: '/services/scalp-massage',
-    price: 'AED 60',
-    featured: false,
-    isAddOn: true,
-  },
-];
+// Convert servicesData to array format with images
+const services = Object.entries(servicesData).map(([slug, data]) => ({
+  title: data.title,
+  description: data.description,
+  href: `/services/${slug}`,
+  price: data.price,
+  featured: ['balinese-massage', 'thai-massage', 'swedish-relaxing-massage', 'deep-tissue-massage'].includes(slug),
+  isAddOn: data.isAddOn,
+  image: data.image,
+}));
+
 
 export default function Services() {
   return (
