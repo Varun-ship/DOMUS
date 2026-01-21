@@ -25,6 +25,20 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: ritual.title,
     description: ritual.description,
+    alternates: {
+      canonical: `https://www.domus.com/services/${params.slug}`,
+    },
+    openGraph: {
+      title: `${ritual.title} | DOMUS`,
+      description: ritual.description,
+      url: `https://www.domus.com/services/${params.slug}`,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${ritual.title} | DOMUS`,
+      description: ritual.description,
+    },
   };
 }
 

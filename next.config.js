@@ -62,14 +62,24 @@ const nextConfig = {
               key: 'Content-Security-Policy',
               value: [
                 "default-src 'self'",
-                "script-src 'self' 'unsafe-inline' 'unsafe-eval' https:",
-                "style-src 'self' 'unsafe-inline' https:",
-                "img-src 'self' data: https:",
-                "font-src 'self' https: data:",
-                "connect-src 'self' https:",
+                // Scripts: Allow Next.js inline scripts (required), but restrict eval
+                "script-src 'self' 'unsafe-inline' https://cdn.sanity.io https://www.googletagmanager.com",
+                // Styles: Allow inline styles (required for Next.js), but restrict sources
+                "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.sanity.io",
+                // Images: Allow from trusted sources
+                "img-src 'self' data: https: blob:",
+                // Fonts: Allow from Google Fonts and CDN
+                "font-src 'self' https://fonts.gstatic.com https://cdn.sanity.io data:",
+                // Connections: Restrict to same origin and trusted APIs
+                "connect-src 'self' https://cdn.sanity.io https://*.sanity.io https://www.google-analytics.com",
+                // Prevent framing
                 "frame-ancestors 'none'",
+                // Base URI
                 "base-uri 'self'",
+                // Form actions
                 "form-action 'self'",
+                // Upgrade insecure requests
+                "upgrade-insecure-requests",
               ].join('; '),
             },
           ],

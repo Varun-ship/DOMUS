@@ -9,6 +9,14 @@ import AnimatedText from '@/components/AnimatedText';
 export const metadata: Metadata = {
   title: 'FAQ',
   description: 'Frequently asked questions about DOMUS outcall home wellness rituals, booking, preparation, and what to expect.',
+  alternates: {
+    canonical: 'https://www.domus.com/faq',
+  },
+  openGraph: {
+    title: 'Frequently Asked Questions | DOMUS',
+    description: 'Frequently asked questions about DOMUS outcall home wellness rituals, booking, preparation, and what to expect.',
+    url: 'https://www.domus.com/faq',
+  },
 };
 
 const faqItems = [

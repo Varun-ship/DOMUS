@@ -17,17 +17,88 @@ export default function Contact() {
   });
   const [submitted, setSubmitted] = useState(false);
 
+  // Input sanitization function
+  const sanitizeInput = (input: string): string => {
+    // Remove potentially dangerous characters and trim whitespace
+    return input
+      .trim()
+      .replace(/[<>]/g, '') // Remove angle brackets to prevent HTML injection
+      .slice(0, 5000); // Limit length to prevent DoS
+  };
+
+  // Email validation
+  const isValidEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  // Phone validation (optional field)
+  const isValidPhone = (phone: string): boolean => {
+    if (!phone) return true; // Optional field
+    const phoneRegex = /^[\d\s\-\+\(\)]+$/;
+    return phoneRegex.test(phone) && phone.replace(/\D/g, '').length >= 10;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate inputs
+    if (!formData.name || formData.name.trim().length < 2) {
+      alert('Please enter a valid name (at least 2 characters)');
+      return;
+    }
+
+    if (!isValidEmail(formData.email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+
+    if (formData.phone && !isValidPhone(formData.phone)) {
+      alert('Please enter a valid phone number');
+      return;
+    }
+
+    if (!formData.location || formData.location.trim().length < 3) {
+      alert('Please enter a valid location');
+      return;
+    }
+
+    // Sanitize all inputs before submission
+    const sanitizedData = {
+      name: sanitizeInput(formData.name),
+      email: sanitizeInput(formData.email),
+      phone: formData.phone ? sanitizeInput(formData.phone) : '',
+      preferredDate: formData.preferredDate,
+      preferredTime: formData.preferredTime,
+      location: sanitizeInput(formData.location),
+      goals: formData.goals ? sanitizeInput(formData.goals) : '',
+      notes: formData.notes ? sanitizeInput(formData.notes) : '',
+    };
+
     // In a real application, this would submit to an API
+    // For now, we'll just show the success message
+    console.log('Form data (sanitized):', sanitizedData);
     setSubmitted(true);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const value = e.target.value;
+    const name = e.target.name;
+
+    // Apply basic sanitization on change for text inputs
+    if (name === 'name' || name === 'location' || name === 'goals' || name === 'notes') {
+      // Limit length in real-time
+      const sanitized = value.slice(0, 5000);
+      setFormData({
+        ...formData,
+        [name]: sanitized,
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   if (submitted) {

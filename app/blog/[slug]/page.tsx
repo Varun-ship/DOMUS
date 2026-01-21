@@ -19,13 +19,28 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     return {};
   }
 
+  const imageUrl = post.mainImage?.asset ? urlFor(post.mainImage.asset).width(1200).height(630).url() : undefined;
+
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `https://www.domus.com/blog/${params.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      images: post.mainImage?.asset?.url ? [post.mainImage.asset.url] : [],
+      url: `https://www.domus.com/blog/${params.slug}`,
+      type: 'article',
+      publishedTime: post.publishedAt,
+      authors: ['DOMUS'],
+      images: imageUrl ? [imageUrl] : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: imageUrl ? [imageUrl] : [],
     },
   };
 }

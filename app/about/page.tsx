@@ -7,6 +7,14 @@ import AnimatedText from '@/components/AnimatedText';
 export const metadata: Metadata = {
   title: 'About',
   description: 'Learn about DOMUS—our philosophy, approach, and commitment to bringing ancient Roman bath rituals into modern home wellness.',
+  alternates: {
+    canonical: 'https://www.domus.com/about',
+  },
+  openGraph: {
+    title: 'About DOMUS | Premium Outcall Home Wellness',
+    description: 'Learn about DOMUS—our philosophy, approach, and commitment to bringing ancient Roman bath rituals into modern home wellness.',
+    url: 'https://www.domus.com/about',
+  },
 };
 
 export default function About() {

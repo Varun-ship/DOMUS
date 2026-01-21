@@ -11,6 +11,15 @@ import { servicesData } from '@/app/services/services-data';
 export const metadata: Metadata = {
   title: 'Home',
   description: 'DOMUS brings ancient Roman bath rituals to your home. Premium outcall wellness with warmth, presence, touch, and renewal.',
+  alternates: {
+    canonical: 'https://www.domus.com',
+  },
+  openGraph: {
+    title: 'DOMUS — Premium Outcall Home Wellness Rituals',
+    description: 'DOMUS brings ancient Roman bath rituals to your home. Premium outcall wellness with warmth, presence, touch, and renewal.',
+    url: 'https://www.domus.com',
+    type: 'website',
+  },
 };
 
 // Get featured services with images

@@ -1,0 +1,13 @@
+# robots.txt for DOMUS
+# https://www.domus.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Disallow admin/studio routes
+Disallow: /studio
+Disallow: /api
+
+# Sitemap location
+Sitemap: https://www.domus.com/sitemap.xml
+
