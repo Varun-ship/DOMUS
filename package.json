@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:siteground": "NEXT_EXPORT=true next build",
+    "export": "npm run build:siteground",
     "start": "next start",
     "lint": "next lint",
-    "studio": "sanity dev --port 3333"
+    "studio": "sanity dev --port 3333",
+    "studio:deploy": "sanity deploy"
   },
   "dependencies": {
     "@portabletext/react": "^6.0.2",
