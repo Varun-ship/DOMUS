@@ -7,10 +7,25 @@ import { getBlogPostBySlug, getAllBlogPosts, formatDate, urlFor } from '@/lib/sa
 import PortableText from '@/components/PortableText';
 
 export async function generateStaticParams() {
-  const posts = await getAllBlogPosts();
-  return posts.map((post) => ({
-    slug: post.slug.current,
-  }));
+  // For static export, Next.js requires this function to return at least one param
+  // If no posts exist, we return a placeholder that will trigger notFound()
+  try {
+    const posts = await getAllBlogPosts();
+    if (posts && posts.length > 0) {
+      return posts
+        .filter((post) => post?.slug?.current)
+        .map((post) => ({
+          slug: post.slug.current,
+        }));
+    }
+  } catch (error) {
+    // If Sanity is unavailable, log but continue
+    console.warn('generateStaticParams: Could not fetch blog posts', error);
+  }
+  
+  // Return placeholder to satisfy static export requirement
+  // The page component will handle this with notFound()
+  return [{ slug: '__placeholder__' }];
 }
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
@@ -46,6 +61,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default async function BlogPost({ params }: { params: { slug: string } }) {
+  // Handle placeholder slug used for static export when no posts exist
+  if (params.slug === '__placeholder__') {
+    notFound();
+  }
+
   const post = await getBlogPostBySlug(params.slug);
 
   if (!post) {
