@@ -34,7 +34,7 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     aftercare: 'Rest for at least 30 minutes. Hydrate with warm water or herbal tea. Avoid heavy meals immediately after. The relaxing effects often last for several hours.',
     price: 'AED 320',
-    image: '/images/balinese-massage.jpg',
+    image: 'https://images.unsplash.com/photo-nMVUTY8_gGw?w=800&h=600&fit=crop&q=80',
   },
   'thai-massage': {
     title: 'Thai Massage',
@@ -58,7 +58,7 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     aftercare: 'Drink plenty of water. Avoid strenuous activity for a few hours. You may feel more flexible and energized. Some mild soreness is normal and should subside within 24 hours.',
     price: 'AED 380',
-    image: '/images/thai-massage.jpg',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop&q=80',
   },
   'swedish-relaxing-massage': {
     title: 'Swedish Relaxing Massage',
@@ -83,7 +83,7 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     aftercare: 'Rest for 30-60 minutes. Hydrate well. Avoid heavy meals immediately after. You should feel relaxed and rejuvenated. The calming effects can last for several hours.',
     price: 'AED 320',
-    image: '/images/swedish-relaxing-massage.jpg',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop&q=80',
   },
   'deep-tissue-massage': {
     title: 'Deep Tissue Massage',
@@ -108,7 +108,7 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     aftercare: 'Rest for at least 2 hours. Apply ice to any tender areas if needed. Hydrate well. Some soreness is normal and should subside within 24-48 hours. Avoid strenuous activity for 24 hours.',
     price: 'AED 400',
-    image: '/images/deep-tissue-massage.jpg',
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop&q=80',
   },
   'couples-massage': {
     title: 'Couples Massage',
@@ -133,7 +133,7 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     aftercare: 'Take time to rest together. Hydrate well. Avoid scheduling other activities immediately after. Enjoy the shared sense of relaxation and connection.',
     price: 'AED 640',
-    image: '/images/couples-massage.jpg',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop',
   },
   'hot-stone-massage': {
     title: 'Hot Stone Massage',
@@ -158,7 +158,7 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     aftercare: 'Rest for at least an hour. Hydrate well with water. The heat effects continue for several hours. Avoid hot showers or baths immediately after.',
     price: 'AED 400',
-    image: '/images/hot-stone-massage.jpg',
+    image: 'https://images.unsplash.com/photo-_TyrA1RUaiI?w=800&h=600&fit=crop&q=80',
   },
   'sport-massage': {
     title: 'Sport Massage',
@@ -183,7 +183,7 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     aftercare: 'Hydrate well with water and electrolytes. Rest for 1-2 hours. Light stretching is beneficial. Avoid intense training for 24 hours. The recovery benefits continue for several days.',
     price: 'AED 680',
-    image: '/images/sport-massage.jpg',
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop',
   },
   'aromatherapy-massage': {
     title: 'Aromatherapy Massage',
@@ -209,7 +209,7 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     aftercare: 'Rest for at least an hour. The essential oils continue to work through your system. Hydrate well. Avoid washing immediately to allow oils to absorb. The calming effects can last for hours.',
     price: 'AED 400',
-    image: '/images/aromatherapy-massage.jpg',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop',
   },
   'four-hand-massage': {
     title: 'Four Hand Massage',
@@ -234,7 +234,7 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     aftercare: 'Rest for at least 2 hours. This is an intense relaxation experience—allow time for integration. Hydrate well. Avoid scheduling other activities. The deep relaxation effects can last for days.',
     price: 'AED 550',
-    image: '/images/four-hand-massage.jpg',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop',
   },
   'head-neck-shoulder-massage': {
     title: 'Head, Neck & Shoulder Massage',
@@ -258,7 +258,7 @@ export const servicesData: Record<string, ServiceData> = {
     ],
     aftercare: 'Rest for 30 minutes. Hydrate well. Avoid looking down at screens immediately after. Practice gentle neck stretches. The relief from tension can last for several hours.',
     price: 'AED 160',
-    image: '/images/head-neck-shoulder-massage.jpg',
+    image: 'https://images.unsplash.com/photo-WAm_HaI4W2E?w=800&h=600&fit=crop&q=80',
   },
   'facial-massage': {
     title: 'Facial Massage',
@@ -282,7 +282,7 @@ export const servicesData: Record<string, ServiceData> = {
     aftercare: 'Allow the natural oils to absorb. Avoid washing face immediately. The rejuvenating effects continue for several hours. Skin may appear more radiant.',
     price: 'AED 65',
     isAddOn: true,
-    image: '/images/facial-massage.jpg',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop',
   },
   'foot-massage': {
     title: 'Foot Massage',
@@ -306,7 +306,7 @@ export const servicesData: Record<string, ServiceData> = {
     aftercare: 'Rest for 30 minutes. Hydrate well. The reflexology effects continue to work throughout the body. You may feel more balanced and relaxed overall.',
     price: 'AED 60',
     isAddOn: true,
-    image: '/images/foot-massage.jpg',
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&h=600&fit=crop',
   },
   'scalp-massage': {
     title: 'Scalp Massage',
@@ -330,7 +330,7 @@ export const servicesData: Record<string, ServiceData> = {
     aftercare: 'Rest for 30 minutes. The relaxing effects continue. You may feel a sense of lightness and reduced tension in the head and neck area.',
     price: 'AED 60',
     isAddOn: true,
-    image: '/images/scalp-massage.jpg',
+    image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&h=600&fit=crop',
   },
 };
 
