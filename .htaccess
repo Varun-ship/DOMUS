@@ -6,8 +6,41 @@
   RewriteEngine On
   RewriteBase /
   
-  # Handle Next.js client-side routing
-  # If file or directory doesn't exist, serve index.html
+  # Exclude static assets from rewriting
+  RewriteCond %{REQUEST_URI} ^/_next/ [OR]
+  RewriteCond %{REQUEST_URI} ^/images/ [OR]
+  RewriteCond %{REQUEST_URI} ^/videos/ [OR]
+  RewriteCond %{REQUEST_URI} \.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot|mp4|webp|xml|txt|json)$
+  RewriteRule ^ - [L]
+  
+  # If the request is for a file that exists, serve it
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+  
+  # Handle requests with trailing slashes to directories that have corresponding HTML files
+  # e.g., /services/ -> /services.html (if services.html exists)
+  RewriteCond %{REQUEST_URI} ^(.+)/$
+  RewriteCond %{DOCUMENT_ROOT}%1.html -f
+  RewriteRule ^(.+)/$ /$1.html [R=301,L]
+  
+  # Remove trailing slashes for non-directories (standard case)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_URI} ^(.+)/$
+  RewriteRule ^ %1 [R=301,L]
+  
+  # Try to serve the HTML file (e.g., /blog -> /blog.html)
+  # Internal rewrite (no redirect) - URL stays as /blog
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+  RewriteRule ^(.*)$ /$1.html [L]
+  
+  # If it's a directory request, check for HTML file first (internal rewrite)
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+  RewriteRule ^(.*)$ /$1.html [L]
+  
+  # Fallback to index.html for client-side routing
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.*)$ /index.html [L]
@@ -28,17 +61,38 @@
 # Cache Control for Better Performance
 <IfModule mod_expires.c>
   ExpiresActive On
+  # HTML files - no cache to ensure fresh content
+  ExpiresByType text/html "access plus 0 seconds"
+  # JavaScript files - short cache with revalidation
+  ExpiresByType application/javascript "access plus 0 seconds"
+  ExpiresByType text/javascript "access plus 0 seconds"
+  # Images - long cache
   ExpiresByType image/jpg "access plus 1 year"
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
   ExpiresByType image/png "access plus 1 year"
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
+  # CSS - short cache
+  ExpiresByType text/css "access plus 1 week"
   ExpiresByType application/json "access plus 1 month"
+  # Fonts - long cache
   ExpiresByType font/woff "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Cache-Control headers for HTML and JS files
+<IfModule mod_headers.c>
+  # HTML files - no cache
+  <FilesMatch "\.(html|htm)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+  # JavaScript files - short cache with revalidation
+  <FilesMatch "\.(js)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
 </IfModule>
 
 # Gzip Compression
