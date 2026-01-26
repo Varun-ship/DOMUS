@@ -11,3 +11,4 @@ Disallow: /api
 # Sitemap location
 Sitemap: https://www.domus.com/sitemap.xml
 
+

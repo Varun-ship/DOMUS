@@ -3,7 +3,8 @@ import { createClient } from '@sanity/client';
 export const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
-  useCdn: true, // Set to false if statically generating pages, using ISR or using the token
+  // Disable CDN for static builds to get fresh data, enable for runtime
+  useCdn: process.env.NEXT_EXPORT !== 'true',
   apiVersion: '2024-01-01', // Use current date (YYYY-MM-DD) to target the latest API version
   token: process.env.SANITY_API_TOKEN, // Optional, for authenticated requests
 });

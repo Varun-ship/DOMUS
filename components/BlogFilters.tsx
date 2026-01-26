@@ -3,10 +3,14 @@
 import { useState, useMemo } from 'react';
 import RitualCard from '@/components/RitualCard';
 import AnimatedSection from '@/components/AnimatedSection';
-import { urlFor, type BlogPost } from '@/lib/sanity-queries';
+import { type BlogPost } from '@/lib/sanity-queries';
+
+interface BlogPostWithImage extends BlogPost {
+  imageUrl?: string;
+}
 
 interface BlogFiltersProps {
-  posts: BlogPost[];
+  posts: BlogPostWithImage[];
 }
 
 export default function BlogFilters({ posts }: BlogFiltersProps) {
@@ -40,7 +44,7 @@ export default function BlogFilters({ posts }: BlogFiltersProps) {
     description: post.excerpt,
     href: `/blog/${post.slug.current}`,
     category: post.category?.title || 'Uncategorized',
-    image: post.mainImage?.asset ? urlFor(post.mainImage.asset).width(800).height(600).url() : undefined,
+    image: (post as BlogPostWithImage).imageUrl,
   }));
 
   return (
@@ -111,4 +115,5 @@ export default function BlogFilters({ posts }: BlogFiltersProps) {
     </>
   );
 }
+
 

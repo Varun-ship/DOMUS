@@ -16,7 +16,7 @@ export default function AnimatedSection({ children, delay = 0, className = '' }:
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className={className}
+      className={`animated-section ${className}`}
     >
       {children}
     </motion.div>

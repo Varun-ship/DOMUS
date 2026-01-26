@@ -32,3 +32,4 @@ if (fs.existsSync(sitegroundConfig)) {
 console.log('✅ Config ready. Run: npm run build\n');
 console.log('After build completes, the original config will be restored.\n');
 
+

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import AnimatedHeading from '@/components/AnimatedHeading';
 import AnimatedText from '@/components/AnimatedText';
 import BlogFilters from '@/components/BlogFilters';
-import { getAllBlogPosts, type BlogPost } from '@/lib/sanity-queries';
+import { getAllBlogPosts, type BlogPost, urlFor } from '@/lib/sanity-queries';
 
 export const metadata: Metadata = {
   title: 'Journal',
@@ -13,6 +13,14 @@ export const metadata: Metadata = {
 export default async function Blog() {
   // Fetch blog posts on the server
   const blogPosts: BlogPost[] = await getAllBlogPosts();
+
+  // Pre-process posts to include image URLs (server-side only)
+  const postsWithImages = blogPosts.map((post) => ({
+    ...post,
+    imageUrl: post.mainImage?.asset 
+      ? urlFor(post.mainImage.asset).width(800).height(600).url() 
+      : undefined,
+  }));
 
   return (
     <div className="pt-24">
@@ -41,7 +49,7 @@ export default async function Blog() {
       </section>
 
       {/* Search, Categories, and Blog Posts Grid */}
-      <BlogFilters posts={blogPosts} />
+      <BlogFilters posts={postsWithImages} />
     </div>
   );
 }

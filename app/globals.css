@@ -36,4 +36,19 @@
   }
 }
 
+/* Fallback for animated components: Show content even if JS doesn't load */
+/* This ensures content is visible in static export even if JavaScript fails */
+@layer components {
+  .animated-section,
+  .animated-heading,
+  .animated-text {
+    /* Make content visible by default - animation will enhance it */
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  /* When JS loads and Framer Motion is active, it will override these */
+  /* But if JS doesn't load, content remains visible */
+}
+
 
