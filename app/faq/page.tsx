@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: 'FAQ',
   description: 'Frequently asked questions about DOMUS outcall home wellness rituals, booking, preparation, and what to expect.',
   alternates: {
-    canonical: 'https://www.domus.com/faq',
+    canonical: 'https://www.domusspa.com/faq',
   },
   openGraph: {
     title: 'Frequently Asked Questions | DOMUS',
     description: 'Frequently asked questions about DOMUS outcall home wellness rituals, booking, preparation, and what to expect.',
-    url: 'https://www.domus.com/faq',
+    url: 'https://www.domusspa.com/faq',
   },
 };
 

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Caudex, Inter } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -21,7 +22,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.domus.com'),
+  metadataBase: new URL('https://www.domusspa.com'),
   title: {
     default: 'DOMUS — Premium Outcall Home Wellness Rituals',
     template: '%s | DOMUS',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://www.domus.com',
+    url: 'https://www.domusspa.com',
     siteName: 'DOMUS',
     title: 'DOMUS — Premium Outcall Home Wellness Rituals',
     description: 'Ancient Roman bath rituals reimagined for modern living. Premium outcall home wellness.',
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     images: ['/images/og-image.jpg'],
   },
   alternates: {
-    canonical: 'https://www.domus.com',
+    canonical: 'https://www.domusspa.com',
   },
   verification: {
     // Add when you have verification codes
@@ -84,13 +85,36 @@ export default function RootLayout({
     '@type': 'HealthAndBeautyBusiness',
     name: 'DOMUS',
     description: 'Premium outcall home wellness rituals inspired by ancient Roman bath traditions',
-    url: 'https://domus.com',
+    url: 'https://www.domusspa.com',
     serviceType: 'Wellness Services',
   };
 
   return (
     <html lang="en" className={`${caudex.variable} ${inter.variable}`}>
       <body className="min-h-screen flex flex-col">
+        {/* Google Tag Manager */}
+        <Script
+          id="google-tag-manager"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NW6PTWNP');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NW6PTWNP"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <StructuredData data={organizationSchema} />
         <Header />
         <main className="flex-1">{children}</main>

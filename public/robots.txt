@@ -1,5 +1,5 @@
 # robots.txt for DOMUS
-# https://www.domus.com/robots.txt
+# https://www.domusspa.com/robots.txt
 
 User-agent: *
 Allow: /
@@ -9,6 +9,6 @@ Disallow: /studio
 Disallow: /api
 
 # Sitemap location
-Sitemap: https://www.domus.com/sitemap.xml
+Sitemap: https://www.domusspa.com/sitemap.xml
 
 

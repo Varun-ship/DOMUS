@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: 'Services',
   description: 'Explore our premium outcall home wellness rituals. Each service is designed to bring warmth, presence, and renewal into your space.',
   alternates: {
-    canonical: 'https://www.domus.com/services',
+    canonical: 'https://www.domusspa.com/services',
   },
   openGraph: {
     title: 'Wellness Services | DOMUS',
     description: 'Explore our premium outcall home wellness rituals. Each service is designed to bring warmth, presence, and renewal into your space.',
-    url: 'https://www.domus.com/services',
+    url: 'https://www.domusspa.com/services',
   },
 };
 

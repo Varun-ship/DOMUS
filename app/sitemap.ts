@@ -3,7 +3,7 @@ import { getAllBlogPosts } from '@/lib/sanity-queries';
 import { servicesData } from '@/app/services/services-data';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://www.domus.com';
+  const baseUrl = 'https://www.domusspa.com';
   
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [

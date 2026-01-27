@@ -40,12 +40,12 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     title: post.title,
     description: post.excerpt,
     alternates: {
-      canonical: `https://www.domus.com/blog/${params.slug}`,
+      canonical: `https://www.domusspa.com/blog/${params.slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://www.domus.com/blog/${params.slug}`,
+      url: `https://www.domusspa.com/blog/${params.slug}`,
       type: 'article',
       publishedTime: post.publishedAt,
       authors: ['DOMUS'],

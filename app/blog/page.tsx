@@ -8,6 +8,15 @@ import { getAllBlogPosts, type BlogPost, urlFor } from '@/lib/sanity-queries';
 export const metadata: Metadata = {
   title: 'Journal',
   description: 'News, seasonal notes, and stories from DOMUS. Updates on our practice, reflections on wellness, and insights into slow living.',
+  alternates: {
+    canonical: 'https://www.domusspa.com/blog',
+  },
+  openGraph: {
+    title: 'Journal | DOMUS',
+    description: 'News, seasonal notes, and stories from DOMUS. Updates on our practice, reflections on wellness, and insights into slow living.',
+    url: 'https://www.domusspa.com/blog',
+    type: 'website',
+  },
 };
 
 export default async function Blog() {

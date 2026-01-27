@@ -71,7 +71,9 @@ const nextConfig = {
                 // Fonts: Allow from Google Fonts and CDN
                 "font-src 'self' https://fonts.gstatic.com https://cdn.sanity.io data:",
                 // Connections: Restrict to same origin and trusted APIs
-                "connect-src 'self' https://cdn.sanity.io https://*.sanity.io https://www.google-analytics.com",
+                "connect-src 'self' https://cdn.sanity.io https://*.sanity.io https://www.google-analytics.com https://www.googletagmanager.com",
+                // Frames: Allow GTM noscript iframe
+                "frame-src 'self' https://www.googletagmanager.com",
                 // Prevent framing
                 "frame-ancestors 'none'",
                 // Base URI
