@@ -31,7 +31,7 @@ export default function BookingCTA() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <a
-            href="https://wa.me/971585227291"
+            href="https://wa.me/971585227291?text=Hi%2C%20I%27d%20like%20to%20book%20a%20massage"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-aureum-gold text-domus-green px-8 py-4 rounded-sm font-inter text-sm tracking-wide hover:bg-aureum-gold/90 transition-colors"

@@ -49,7 +49,7 @@ export default function Header() {
             FAQ
           </Link>
           <a 
-            href="https://wa.me/971585227291"
+            href="https://wa.me/971585227291?text=Hi%2C%20I%27d%20like%20to%20book%20a%20massage"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-domus-green text-warm-stone px-6 py-2 rounded-sm font-inter text-sm tracking-wide hover:bg-domus-green/90 transition-colors"
@@ -97,7 +97,7 @@ export default function Header() {
                 FAQ
               </Link>
               <a 
-                href="https://wa.me/971585227291"
+                href="https://wa.me/971585227291?text=Hi%2C%20I%27d%20like%20to%20book%20a%20massage"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-domus-green text-warm-stone px-6 py-2 rounded-sm text-center mt-4"

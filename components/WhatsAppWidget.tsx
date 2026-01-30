@@ -9,7 +9,7 @@ interface WhatsAppWidgetProps {
 
 export default function WhatsAppWidget({ 
   phoneNumber = '971585227291',
-  message = 'Hello, I would like to book a ritual'
+  message = "Hi, I'd like to book a massage"
 }: WhatsAppWidgetProps) {
   const whatsappUrl = `https://wa.me/${phoneNumber}${message ? `?text=${encodeURIComponent(message)}` : ''}`;
 
