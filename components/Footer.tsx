@@ -31,6 +31,9 @@ export default function Footer() {
             <p className="font-inter text-sm font-light leading-relaxed text-warm-stone/80 max-w-md">
               At-home wellness rituals, reimagined for modern living. Premium outcall spa treatments that bring warmth, presence, touch, and renewal into your home.
             </p>
+            <p className="font-inter text-sm font-light text-warm-stone/70 mt-3">
+              LUXY SERVICES LLC FZ
+            </p>
           </div>
 
           {/* Navigation */}
