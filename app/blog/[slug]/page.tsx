@@ -76,7 +76,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
     <div className="pt-24">
       <article className="max-w-3xl mx-auto px-6 py-20">
         <AnimatedSection>
-          <Link href="/blog" className="inline-block mb-8 text-aureum-gold hover:text-aureum-gold/80 font-inter text-sm tracking-wide">
+          <Link id="blog-back-to-journal" href="/blog" className="inline-block mb-8 text-aureum-gold hover:text-aureum-gold/80 font-inter text-sm tracking-wide">
             ← Back to Journal
           </Link>
           <div className="mb-6">

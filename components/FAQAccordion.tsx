@@ -20,6 +20,7 @@ export default function FAQAccordion({ items }: FAQAccordionProps) {
       {items.map((item, index) => (
         <div key={index} className="border-b border-aureum-gold/20 pb-4">
           <button
+            id={`faq-accordion-${index}`}
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
             className="w-full text-left flex items-center justify-between py-2"
           >

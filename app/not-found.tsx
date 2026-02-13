@@ -12,6 +12,7 @@ export default function NotFound() {
           The page you're looking for doesn't exist.
         </p>
         <Link
+          id="not-found-return-home"
           href="/"
           className="inline-block bg-domus-green text-warm-stone px-8 py-4 rounded-sm font-inter text-sm tracking-wide hover:bg-domus-green/90 transition-colors"
         >

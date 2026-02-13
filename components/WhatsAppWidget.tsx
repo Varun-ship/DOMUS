@@ -15,6 +15,7 @@ export default function WhatsAppWidget({
 
   return (
     <motion.a
+      id="whatsapp-float"
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"

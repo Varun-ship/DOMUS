@@ -84,6 +84,7 @@ export default function Rituals() {
           <div className="flex flex-wrap gap-4">
             {categories.map((category) => (
               <button
+                id={`rituals-category-${category.toLowerCase().replace(/\s+/g, '-')}`}
                 key={category}
                 className="px-4 py-2 border border-aureum-gold/30 rounded-sm font-inter text-sm tracking-wide text-ash-brown hover:border-aureum-gold hover:bg-aureum-gold/5 transition-colors"
               >

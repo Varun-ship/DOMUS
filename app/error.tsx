@@ -27,12 +27,14 @@ export default function Error({
         </p>
         <div className="flex gap-4 justify-center">
           <button
+            id="error-try-again"
             onClick={reset}
             className="bg-domus-green text-warm-stone px-8 py-4 rounded-sm font-inter text-sm tracking-wide hover:bg-domus-green/90 transition-colors"
           >
             Try Again
           </button>
           <Link
+            id="error-return-home"
             href="/"
             className="inline-block bg-ash-brown/10 text-ash-brown px-8 py-4 rounded-sm font-inter text-sm tracking-wide hover:bg-ash-brown/20 transition-colors"
           >

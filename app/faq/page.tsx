@@ -127,6 +127,7 @@ export default function FAQ() {
               We're here to help. Contact us with any questions or to discuss your needs.
             </p>
             <a
+              id="faq-contact-us"
               href="https://wa.me/971585227291?text=Hi%2C%20I%27d%20like%20to%20book%20a%20massage"
               target="_blank"
               rel="noopener noreferrer"

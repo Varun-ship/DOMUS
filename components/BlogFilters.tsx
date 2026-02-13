@@ -77,6 +77,7 @@ export default function BlogFilters({ posts }: BlogFiltersProps) {
           <div className="flex flex-wrap gap-4 justify-center">
             {availableCategories.map((category) => (
               <button
+                id={`blog-category-${category.toLowerCase().replace(/\s+/g, '-')}`}
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 border rounded-sm font-inter text-sm tracking-wide transition-colors ${

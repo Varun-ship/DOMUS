@@ -23,7 +23,7 @@ export default function RitualCard({ title, description, href, image, price, isA
       transition={{ duration: 0.2 }}
       className="group"
     >
-      <Link href={href} className="block h-full">
+      <Link id={`ritual-card-${href.replace(/\//g, '-').replace(/^-/, '')}`} href={href} className="block h-full">
         <div className="bg-warm-stone rounded-sm border border-aureum-gold/20 overflow-hidden hover:border-aureum-gold/40 transition-all shadow-sm hover:shadow-md relative h-full flex flex-col">
           {/* Add-on Badge */}
           {isAddOn && (

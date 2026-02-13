@@ -41,22 +41,22 @@ export default function Footer() {
             <h4 className="font-caudex text-lg mb-4">Explore</h4>
             <ul className="space-y-2 font-inter text-sm font-light">
               <li>
-                <Link href="/about" className="hover:text-aureum-gold transition-colors">
+                <Link id="footer-explore-about" href="/about" className="hover:text-aureum-gold transition-colors">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-aureum-gold transition-colors">
+                <Link id="footer-explore-services" href="/services" className="hover:text-aureum-gold transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-aureum-gold transition-colors">
+                <Link id="footer-explore-journal" href="/blog" className="hover:text-aureum-gold transition-colors">
                   Journal
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-aureum-gold transition-colors">
+                <Link id="footer-explore-faq" href="/faq" className="hover:text-aureum-gold transition-colors">
                   FAQ
                 </Link>
               </li>
@@ -68,22 +68,22 @@ export default function Footer() {
             <h4 className="font-caudex text-lg mb-4">Connect</h4>
             <ul className="space-y-2 font-inter text-sm font-light">
               <li>
-                <Link href="/contact" className="hover:text-aureum-gold transition-colors">
+                <Link id="footer-connect-contact" href="/contact" className="hover:text-aureum-gold transition-colors">
                   Contact
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="hover:text-aureum-gold transition-colors">
+                <Link id="footer-connect-faq" href="/faq" className="hover:text-aureum-gold transition-colors">
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/legal/privacy" className="hover:text-aureum-gold transition-colors">
+                <Link id="footer-connect-privacy" href="/legal/privacy" className="hover:text-aureum-gold transition-colors">
                   Privacy
                 </Link>
               </li>
               <li>
-                <Link href="/legal/terms" className="hover:text-aureum-gold transition-colors">
+                <Link id="footer-connect-terms" href="/legal/terms" className="hover:text-aureum-gold transition-colors">
                   Terms
                 </Link>
               </li>

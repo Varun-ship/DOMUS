@@ -18,6 +18,7 @@ export default function StudioPage() {
           Sanity Studio is not available on static hosting. Please use the hosted studio instead.
         </p>
         <a
+          id="studio-open-hosted"
           href="https://admindomus.sanity.studio"
           target="_blank"
           rel="noopener noreferrer"

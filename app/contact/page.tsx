@@ -117,6 +117,7 @@ export default function Contact() {
             We've received your request and will respond within 24 hours. We look forward to creating a ritual experience for you.
           </p>
           <a
+            id="contact-return-home"
             href="/"
             className="inline-block bg-domus-green text-warm-stone px-8 py-4 rounded-sm font-inter text-sm tracking-wide hover:bg-domus-green/90 transition-colors"
           >
@@ -292,6 +293,7 @@ export default function Contact() {
             </div>
 
             <button
+              id="contact-submit"
               type="submit"
               className="w-full bg-domus-green text-warm-stone px-8 py-4 rounded-sm font-inter text-sm tracking-wide hover:bg-domus-green/90 transition-colors"
             >

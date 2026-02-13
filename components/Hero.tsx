@@ -66,6 +66,7 @@ export default function Hero({ headline, subcopy, ctaText = 'Book a ritual', cta
             transition={{ duration: 0.6, delay: 0.4, ease: 'easeOut' }}
           >
             <a
+              id="hero-cta-book"
               href="https://wa.me/971585227291?text=Hi%2C%20I%27d%20like%20to%20book%20a%20massage"
               target="_blank"
               rel="noopener noreferrer"

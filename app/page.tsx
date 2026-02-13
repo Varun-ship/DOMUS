@@ -119,6 +119,7 @@ Premium outcall spa treatments that bring warmth, presence, touch, and renewal i
           </div>
           <AnimatedSection delay={0.4} className="text-center">
             <Link 
+              id="home-view-all-services"
               href="/services"
               className="inline-flex items-center gap-2 text-aureum-gold hover:text-soft-clay font-inter text-sm tracking-wide transition-colors"
             >

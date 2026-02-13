@@ -59,6 +59,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
       <div className="flex justify-center gap-2 mt-8">
         {Array.from({ length: testimonials.length - 1 }).map((_, index) => (
           <button
+            id={`testimonial-dot-${index}`}
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-2 h-2 rounded-full transition-all ${
