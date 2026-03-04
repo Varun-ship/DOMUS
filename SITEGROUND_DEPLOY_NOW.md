@@ -54,3 +54,22 @@ Upload **everything inside** your local `out/` folder **into** SiteGround’s **
 ### If `_next/` is too large to upload in one go
 
 - Zip the `_next` folder on your computer, upload the zip to `public_html/`, then use cPanel **Extract** to unzip it inside `public_html/` so you get `public_html/_next/` with all files inside.
+
+---
+
+## Quick checklist (this build)
+
+Upload **from** your local **`out/`** folder **into** SiteGround **`public_html/`**:
+
+- [ ] **`.htaccess`** (root; enable “Show hidden files” in File Manager)
+- [ ] **`index.html`**, **`404.html`**
+- [ ] **`about.html`**, **`blog.html`**, **`contact.html`**, **`faq.html`**, **`rituals.html`**, **`services.html`**, **`studio.html`**
+- [ ] **`robots.txt`**, **`sitemap.xml`**
+- [ ] **`DomusLogo.png`**
+- [ ] **`_next/`** (entire folder)
+- [ ] **`images/`** (entire folder)
+- [ ] **`videos/`** (entire folder)
+- [ ] **`blog/`** (entire folder)
+- [ ] **`services/`** (entire folder)
+- [ ] **`rituals/`** (entire folder)
+- [ ] **`legal/`** (entire folder)

@@ -9,7 +9,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-warm-stone/95 backdrop-blur-sm border-b border-aureum-gold/10">
+    <header className="sticky top-12 left-0 right-0 z-50 bg-warm-stone/95 backdrop-blur-sm border-b border-aureum-gold/10">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link id="header-logo" href="/" className="flex items-center">
           <Image

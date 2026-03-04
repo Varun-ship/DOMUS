@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import PromoBanner from '@/components/PromoBanner';
 import StructuredData from '@/components/StructuredData';
 import WhatsAppWidget from '@/components/WhatsAppWidget';
 
@@ -116,6 +117,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         <StructuredData data={organizationSchema} />
+        <PromoBanner />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
