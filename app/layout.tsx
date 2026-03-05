@@ -25,10 +25,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.domusspa.com'),
   title: {
-    default: 'DOMUS — Premium Outcall Home Wellness Rituals',
+    default: 'DOMUS | Luxury Home Massage & Wellness in Dubai',
     template: '%s | DOMUS',
   },
-  description: 'Ancient Roman bath rituals reimagined for modern living. Premium outcall home wellness with warmth, presence, touch, and renewal.',
+  description: 'DOMUS delivers premium home massage and wellness inspired by ancient Roman bath rituals. Experience warmth, presence, touch, and renewal in your own space.',
   keywords: ['wellness', 'home massage', 'outcall spa', 'wellness rituals', 'home wellness', 'massage therapy', 'spa services', 'wellness at home'],
   authors: [{ name: 'DOMUS' }],
   creator: 'DOMUS',
@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.domusspa.com',
     siteName: 'DOMUS',
-    title: 'DOMUS — Premium Outcall Home Wellness Rituals',
-    description: 'Ancient Roman bath rituals reimagined for modern living. Premium outcall home wellness.',
+    title: 'DOMUS | Luxury Home Massage & Wellness in Dubai',
+    description: 'DOMUS delivers premium home massage and wellness inspired by ancient Roman bath rituals. Experience warmth, presence, touch, and renewal in your own space.',
     images: [
       {
         url: '/images/og-image.jpg',
@@ -62,8 +62,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DOMUS — Premium Outcall Home Wellness Rituals',
-    description: 'Ancient Roman bath rituals reimagined for modern living.',
+    title: 'DOMUS | Luxury Home Massage & Wellness in Dubai',
+    description: 'DOMUS delivers premium home massage and wellness inspired by ancient Roman bath rituals. Experience warmth, presence, touch, and renewal in your own space.',
     images: ['/images/og-image.jpg'],
   },
   alternates: {

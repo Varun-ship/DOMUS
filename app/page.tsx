@@ -10,13 +10,13 @@ import { servicesData } from '@/app/services/services-data';
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: 'DOMUS brings ancient Roman bath rituals to your home. Premium outcall wellness with warmth, presence, touch, and renewal.',
+  description: 'DOMUS delivers premium home massage and wellness inspired by ancient Roman bath rituals. Experience warmth, presence, touch, and renewal in your own space.',
   alternates: {
     canonical: 'https://www.domusspa.com',
   },
   openGraph: {
-    title: 'DOMUS — Premium Outcall Home Wellness Rituals',
-    description: 'DOMUS brings ancient Roman bath rituals to your home. Premium outcall wellness with warmth, presence, touch, and renewal.',
+    title: 'DOMUS | Luxury Home Massage & Wellness in Dubai',
+    description: 'DOMUS delivers premium home massage and wellness inspired by ancient Roman bath rituals. Experience warmth, presence, touch, and renewal in your own space.',
     url: 'https://www.domusspa.com',
     type: 'website',
   },

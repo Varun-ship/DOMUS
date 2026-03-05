@@ -1,4 +1,4 @@
-# DOMUS — Premium Outcall Home Wellness Rituals
+# DOMUS | Luxury Home Massage & Wellness in Dubai
 
 A premium, calm-feeling website for DOMUS, an outcall home wellness brand inspired by ancient Roman bath rituals. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
 
